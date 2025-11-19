@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <script src="https://static.readdy.ai/static/e.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>À Propos - Élégance Mobilier - Mobilier de Salon d'Exception</title>
+        <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        <script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B8860B',
+secondary: '#CD853F'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+},
+darkMode: 'class'
+}
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+        <style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+.glass-effect {
+backdrop-filter: blur(30px);
+background: rgba(255, 255, 255, 0.15);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.gradient-overlay {
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(184, 134, 11, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+.hover-scale {
+transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hover-scale:hover {
+transform: scale(1.05) translateY(-10px);
+box-shadow: 0 40px 80px -20px rgba(184, 134, 11, 0.3);
+}
+.text-shadow {
+text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.floating-card {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+.glow-effect {
+box-shadow: 0 0 30px rgba(184, 134, 11, 0.3);
+}
+.premium-border {
+border: 2px solid;
+border-image: linear-gradient(45deg, #B8860B, #FFD700, #B8860B) 1;
+}
+        </style>
+    </head>
+    <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <!-- Navigation -->
+        <nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html">
+                            <img src="Capture_d_écran_2025-11-18_185414-removebg-preview.png" style="width: 180px;" alt="Élégance Mobilier">
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                        <a href="galerie.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Galerie</a>
+                        <a href="a-propos.html" class="text-primary font-medium">À Propos</a>
+                        <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <!-- Dark Mode Toggle -->
+                        <button id="theme-toggle" class="w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <div class="w-5 h-5 bg-white dark:bg-gray-900 rounded-full absolute top-0.5 left-0.5 dark:left-6 transition-all duration-300 shadow-md flex items-center justify-center">
+                                <i class="ri-sun-line dark:ri-moon-line text-xs text-gray-600 dark:text-gray-300"></i>
+                            </div>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center">
+                            <i class="ri-menu-line text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+                <div class="px-4 py-2 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Accueil</a>
+                    <a href="galerie.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Galerie</a>
+                    <a href="a-propos.html" class="block px-3 py-2 text-primary font-medium">À Propos</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Page Content -->
+        <div>
+            <!-- Hero Section About -->
+            <section class="relative min-h-screen flex items-center overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Luxury%20French%20furniture%20workshop%20interior%20with%20master%20artisans%20at%20work%2C%20sophisticated%20craftsmanship%20environment%2C%20traditional%20hand%20tools%2C%20premium%20materials%2C%20warm%20ambient%20lighting%2C%20centuries-old%20techniques%2C%20artistic%20composition&width=1920&height=1080&seq=about-hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/90"></div>
+                <!-- Floating Elements -->
+                <div class="absolute top-32 left-16 w-40 h-40 bg-primary/20 rounded-full floating-card blur-xl"></div>
+                <div class="absolute bottom-32 right-16 w-56 h-56 bg-secondary/20 rounded-full floating-card blur-xl" style="animation-delay: -3s;"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="grid lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <div class="mb-8">
+                                <span class="inline-block bg-primary/20 text-primary px-8 py-4 rounded-full text-lg font-semibold mb-8 glass-effect">
+                                    ✨ Depuis 1990
+                                </span>
+                                <h1 class="text-7xl md:text-9xl font-black text-white mb-8 leading-none text-shadow">
+                                    NOTRE
+                                    <br>
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">
+                                        HISTOIRE
+                                    </span>
+                                </h1>
+                            </div>
+                            <p class="text-2xl md:text-3xl text-white/95 mb-12 leading-relaxed text-shadow font-light">
+                                Trois décennies d'excellence artisanale française où passion, innovation et tradition se rencontrent pour créer l'exceptionnel
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-6">
+                                <a href="contact.html" class="relative overflow-hidden bg-gradient-to-r from-primary to-yellow-500 text-white px-12 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-105 glow-effect whitespace-nowrap group text-center">
+                                    <span class="relative z-10">Notre Manifeste</span>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                </a>
+                                <a href="contact.html" class="glass-effect text-white px-12 py-6 !rounded-button text-xl font-semibold transition-all duration-500 hover:bg-white/20 whitespace-nowrap border border-white/30 text-center">
+                                    Visite Atelier
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block relative">
+                            <!-- Timeline Visual -->
+                            <div class="relative h-[600px]">
+                                <div class="absolute inset-0 flex flex-col justify-between">
+                                    <div class="relative group">
+                                        <div class="w-80 h-40 rounded-3xl overflow-hidden hover-scale shadow-2xl">
+                                            <img src="https://readdy.ai/api/search-image?query=Historical%20French%20furniture%20workshop%20from%201990s%2C%20traditional%20craftsmanship%2C%20vintage%20tools%2C%20master%20artisan%20working%20on%20premium%20furniture%2C%20nostalgic%20atmosphere%2C%20warm%20lighting&width=400&height=200&seq=timeline-1990&orientation=landscape" alt="1990 - Les Débuts" class="w-full h-full object-cover">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                            <div class="absolute bottom-4 left-4 text-white">
+                                                <div class="text-primary font-bold text-lg">1990</div>
+                                                <div class="text-sm">Les Premiers Pas</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group ml-auto">
+                                        <div class="w-80 h-40 rounded-3xl overflow-hidden hover-scale shadow-2xl">
+                                            <img src="https://readdy.ai/api/search-image?query=Modern%20luxury%20furniture%20showroom%20from%202000s%2C%20elegant%20display%2C%20sophisticated%20interior%20design%2C%20premium%20furniture%20collection%2C%20refined%20atmosphere%2C%20professional%20lighting&width=400&height=200&seq=timeline-2000&orientation=landscape" alt="2000 - Expansion" class="w-full h-full object-cover">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                            <div class="absolute bottom-4 left-4 text-white">
+                                                <div class="text-primary font-bold text-lg">2000</div>
+                                                <div class="text-sm">Expansion Parisienne</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group">
+                                        <div class="w-80 h-40 rounded-3xl overflow-hidden hover-scale shadow-2xl">
+                                            <img src="https://readdy.ai/api/search-image?query=Contemporary%20luxury%20furniture%20showroom%20today%2C%20ultra-modern%20displays%2C%20sophisticated%20lighting%2C%20premium%20collections%2C%20elegant%20customers%2C%20high-end%20retail%20experience&width=400&height=200&seq=timeline-2024&orientation=landscape" alt="2024 - Excellence" class="w-full h-full object-cover">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                            <div class="absolute bottom-4 left-4 text-white">
+                                                <div class="text-primary font-bold text-lg">2024</div>
+                                                <div class="text-sm">Excellence Reconnue</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Timeline Line -->
+                                <div class="absolute left-1/2 top-20 bottom-20 w-1 bg-gradient-to-b from-primary via-secondary to-primary transform -translate-x-1/2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <div class="inline-block mb-8">
+                            <span class="text-primary text-lg font-medium tracking-widest uppercase">Nos Valeurs</span>
+                            <div class="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3"></div>
+                        </div>
+                        <h2 class="text-7xl md:text-8xl font-black mb-12 text-gray-900 dark:text-white leading-tight">
+                            L'EXCELLENCE
+                            <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">FRANÇAISE</span>
+                        </h2>
+                        <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                            Quatre piliers fondamentaux qui guident chaque création depuis plus de trente ans
+                        </p>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-16 mb-20">
+                        <div class="relative group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white dark:bg-gray-800 shadow-2xl">
+                                <div class="relative h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Master%20French%20artisan%20hands%20working%20on%20premium%20furniture%20details%2C%20traditional%20hand%20tools%2C%20exquisite%20woodworking%2C%20centuries-old%20craftsmanship%20techniques%2C%20warm%20workshop%20lighting%2C%20artistic%20composition&width=600&height=400&seq=values-craftsmanship&orientation=landscape" alt="Savoir-Faire Artisanal" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
+                                            <i class="ri-hammer-line text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-3xl font-bold mb-2">Savoir-Faire Artisanal</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">HÉRITAGE</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">Nos maîtres artisans perpétuent des techniques séculaires transmises de génération en génération, créant des pièces uniques d'une qualité exceptionnelle.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white dark:bg-gray-800 shadow-2xl">
+                                <div class="relative h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Luxury%20materials%20collection%20display%2C%20rare%20exotic%20woods%2C%20premium%20Italian%20leather%2C%20precious%20fabrics%2C%20marble%20samples%2C%20gold%20accents%2C%20sophisticated%20material%20showcase%2C%20artistic%20composition&width=600&height=400&seq=values-materials&orientation=landscape" alt="Matériaux d'Exception" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
+                                            <i class="ri-diamond-line text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-3xl font-bold mb-2">Matériaux d'Exception</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">EXCELLENCE</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">Cuirs Hermès, bois précieux d'Amazonie, marbres de Carrare... Nous sélectionnons les matériaux les plus nobles pour créer des meubles d'exception.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <div class="relative group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white dark:bg-gray-800 shadow-2xl">
+                                <div class="relative h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Contemporary%20furniture%20design%20studio%20with%20innovative%20sketches%2C%20modern%20CAD%20workstation%2C%20creative%20design%20process%2C%20artistic%20inspiration%2C%20sophisticated%20workspace%2C%20professional%20lighting&width=600&height=400&seq=values-innovation&orientation=landscape" alt="Innovation Design" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
+                                            <i class="ri-lightbulb-line text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-3xl font-bold mb-2">Innovation & Design</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">CRÉATION</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">Notre équipe de designers explore constamment de nouvelles formes et fonctionnalités, créant des meubles qui anticipent les tendances de demain.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white dark:bg-gray-800 shadow-2xl">
+                                <div class="relative h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Luxury%20customer%20service%20experience%20in%20elegant%20showroom%2C%20personal%20consultant%20with%20client%2C%20sophisticated%20retail%20environment%2C%20premium%20service%2C%20attentive%20care%2C%20professional%20interaction&width=600&height=400&seq=values-service&orientation=landscape" alt="Service Client d'Excellence" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
+                                            <i class="ri-customer-service-line text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-3xl font-bold mb-2">Service d'Exception</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">EXPÉRIENCE</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">Chaque client bénéficie d'un accompagnement personnalisé, de la conception à la livraison, pour une expérience unique et inoubliable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="py-32 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+                <div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=Elegant%20workshop%20interior%20background%20with%20sophisticated%20textures%2C%20premium%20materials%2C%20artistic%20lighting%2C%20refined%20atmosphere%2C%20luxury%20craftsmanship%20environment&width=1920&height=1080&seq=team-bg&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.15;"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <div class="inline-block mb-8">
+                            <span class="text-primary text-lg font-medium tracking-widest uppercase">Notre Équipe</span>
+                            <div class="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3"></div>
+                        </div>
+                        <h2 class="text-8xl md:text-9xl font-black mb-12 text-white leading-none">
+                            LES MAÎTRES
+                            <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">ARTISANS</span>
+                        </h2>
+                        <p class="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                            Rencontrez les talents exceptionnels qui donnent vie à vos rêves d'intérieur
+                        </p>
+                    </div>
+                    <div class="grid lg:grid-cols-3 gap-12">
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                <div class="h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Distinguished%20French%20master%20craftsman%20in%20elegant%20workshop%2C%20premium%20furniture%20creation%2C%20sophisticated%20artisan%20portrait%2C%20traditional%20craftsmanship%2C%20warm%20lighting%2C%20professional%20photography&width=400&height=500&seq=team-master-1&orientation=portrait" alt="Jean-Pierre Dubois" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full overflow-hidden mr-4">
+                                            <img src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20distinguished%20French%20master%20craftsman%2C%20elegant%20older%20gentleman%2C%20sophisticated%20artisan%2C%20warm%20expression%2C%20premium%20workshop%20background&width=100&height=100&seq=portrait-1&orientation=squarish" alt="Jean-Pierre Dubois" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-1">Jean-Pierre Dubois</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">MAÎTRE ÉBÉNISTE</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">42 ans d'expérience dans l'art du meuble français. Formé aux Compagnons du Devoir, il supervise notre atelier avec une exigence légendaire.</p>
+                                    <div class="flex items-center mt-4 text-white/70 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                            <i class="ri-award-line text-primary"></i>
+                                        </div>
+                                        <span>Meilleur Ouvrier de France 2018</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                <div class="h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Elegant%20female%20designer%20in%20modern%20design%20studio%2C%20sophisticated%20interior%20designer%2C%20contemporary%20workspace%2C%20creative%20professional%2C%20artistic%20environment%2C%20professional%20photography&width=400&height=500&seq=team-designer-1&orientation=portrait" alt="Sophie Moreau" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full overflow-hidden mr-4">
+                                            <img src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20elegant%20female%20interior%20designer%2C%20sophisticated%20woman%2C%20creative%20professional%2C%20warm%20smile%2C%20modern%20design%20studio%20background&width=100&height=100&seq=portrait-2&orientation=squarish" alt="Sophie Moreau" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-1">Sophie Moreau</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">DIRECTRICE CRÉATIVE</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">Diplômée de l'École Boulle, elle insuffle un souffle moderne à nos créations tout en respectant l'héritage artisanal français.</p>
+                                    <div class="flex items-center mt-4 text-white/70 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                            <i class="ri-palette-line text-primary"></i>
+                                        </div>
+                                        <span>Prix du Design Français 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                <div class="h-96 overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=Professional%20customer%20service%20manager%20in%20luxury%20showroom%2C%20elegant%20gentleman%2C%20sophisticated%20retail%20environment%2C%20premium%20service%20excellence%2C%20professional%20photography&width=400&height=500&seq=team-manager-1&orientation=portrait" alt="Laurent Fontaine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full overflow-hidden mr-4">
+                                            <img src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20sophisticated%20customer%20service%20manager%2C%20elegant%20middle-aged%20man%2C%20luxury%20retail%20background%2C%20warm%20professional%20expression&width=100&height=100&seq=portrait-3&orientation=squarish" alt="Laurent Fontaine" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-1">Laurent Fontaine</h3>
+                                            <span class="text-primary text-sm font-medium tracking-wider uppercase">DIRECTEUR COMMERCIAL</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-white/90 text-lg leading-relaxed">15 ans dans le luxe français, il orchestre l'expérience client avec une attention exceptionnelle aux moindres détails.</p>
+                                    <div class="flex items-center mt-4 text-white/70 text-sm">
+                                        <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                            <i class="ri-customer-service-line text-primary"></i>
+                                        </div>
+                                        <span>98% de satisfaction client</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journey Timeline -->
+            <section class="py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <h2 class="text-6xl font-black mb-8 text-gray-900 dark:text-white">Notre Parcours</h2>
+                        <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            34 années d'innovation et d'excellence dans l'art du mobilier français
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-primary transform -translate-x-1/2"></div>
+                        <div class="space-y-24">
+                            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                                <div class="lg:text-right">
+                                    <div class="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold text-lg mb-6">1990</div>
+                                    <h3 class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Les Premiers Pas</h3>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                                        Jean-Pierre Dubois ouvre son premier atelier dans le Faubourg Saint-Antoine, berceau de l'ébénisterie parisienne, avec une vision : créer des meubles d'exception.
+                                    </p>
+                                    <div class="flex lg:justify-end gap-4">
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">1</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Atelier</div>
+                                        </div>
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">3</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Artisans</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <img src="https://readdy.ai/api/search-image?query=Historical%20French%20furniture%20workshop%20from%201990%2C%20traditional%20craftsmanship%20tools%2C%20vintage%20woodworking%20equipment%2C%20master%20artisan%20at%20work%2C%20nostalgic%20atmosphere%2C%20warm%20natural%20lighting&width=600&height=400&seq=timeline-detailed-1990&orientation=landscape" alt="1990 - Débuts" class="w-full h-80 object-cover rounded-3xl shadow-2xl">
+                                </div>
+                            </div>
+                            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                                <div class="lg:order-2">
+                                    <div class="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold text-lg mb-6">2005</div>
+                                    <h3 class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Expansion Parisienne</h3>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                                        Ouverture du showroom prestigieux sur les Champs-Élysées. L'Élégance devient une référence dans le mobilier de luxe français.
+                                    </p>
+                                    <div class="flex gap-4">
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">2000m²</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Showroom</div>
+                                        </div>
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">25</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Employés</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:order-1 relative">
+                                    <img src="https://readdy.ai/api/search-image?query=Elegant%20luxury%20furniture%20showroom%20on%20Champs-Elysees%20from%202005%2C%20sophisticated%20displays%2C%20premium%20retail%20environment%2C%20classic%20French%20design%2C%20professional%20lighting&width=600&height=400&seq=timeline-detailed-2005&orientation=landscape" alt="2005 - Expansion" class="w-full h-80 object-cover rounded-3xl shadow-2xl">
+                                </div>
+                            </div>
+                            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                                <div class="lg:text-right">
+                                    <div class="inline-block bg-primary text-white px-6 py-3 rounded-full font-bold text-lg mb-6">2024</div>
+                                    <h3 class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Excellence Reconnue</h3>
+                                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                                        Aujourd'hui, Élégance Mobilier compte plus de 10 000 clients satisfaits et continue d'innover tout en préservant son héritage artisanal.
+                                    </p>
+                                    <div class="flex lg:justify-end gap-4">
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">164</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Créations</div>
+                                        </div>
+                                        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                            <div class="text-2xl font-bold text-primary">10K+</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Clients</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <img src="https://readdy.ai/api/search-image?query=Contemporary%20luxury%20furniture%20showroom%20today%2C%20ultra-modern%20displays%2C%20sophisticated%20lighting%2C%20premium%20collections%2C%20elegant%20customers%20browsing%2C%20high-end%20retail%20experience&width=600&height=400&seq=timeline-detailed-2024&orientation=landscape" alt="2024 - Excellence" class="w-full h-80 object-cover rounded-3xl shadow-2xl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="py-24 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary"></div>
+                <div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=Luxury%20showroom%20interior%20with%20elegant%20furniture%20displays%2C%20sophisticated%20lighting%2C%20premium%20atmosphere%2C%20artistic%20composition%2C%20golden%20accents&width=1920&height=600&seq=cta-bg&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.3;"></div>
+                <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-6xl font-black text-white mb-8 leading-tight text-shadow">
+                        Visitez Notre Univers
+                    </h2>
+                    <p class="text-2xl text-white/95 mb-12 leading-relaxed font-light">
+                        Découvrez nos créations dans notre showroom parisien de 2000m² sur les Champs-Élysées
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="galerie.html" class="bg-white text-primary px-12 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl whitespace-nowrap text-center">
+                            Explorer la Galerie
+                        </a>
+                        <a href="contact.html" class="glass-effect text-white px-12 py-6 !rounded-button text-xl font-semibold transition-all duration-500 hover:bg-white/20 whitespace-nowrap border border-white/50 text-center">
+                            Prendre Rendez-vous
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-['Pacifico'] text-primary mb-4">Élégance</h3>
+                        <p class="text-gray-300 mb-4">Mobilier de salon d'exception depuis 1990</p>
+                        <div class="flex space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-facebook-fill text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-instagram-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-pinterest-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a>
+                            </li>
+                            <li>
+                                <a href="a-propos.html" class="text-gray-300 hover:text-primary transition-colors">À Propos</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Catégories</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Fauteuils</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Canapés</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Accessoires</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Tables Basses</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">123 Avenue des Champs-Élysées, Paris</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">+33 1 42 86 17 20</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">contact@elegance-mobilier.fr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                    <p class="text-gray-400">&copy; 2024 Élégance Mobilier. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+html.classList.add('dark');
+}
+themeToggle.addEventListener('click', function() {
+html.classList.toggle('dark');
+const isDark = html.classList.contains('dark');
+localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+});
+        </script>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+        </script>
+    </body>
+</html>

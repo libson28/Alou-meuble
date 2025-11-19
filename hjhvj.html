@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Exposition - Meubles de Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+        }
+        
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+        
+        .card img, .card video {
+            transition: transform 0.4s ease;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .card:hover img, .card:hover video {
+            transform: scale(1.1);
+        }
+        
+        .card-text {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+        
+        .card:hover .card-text {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h1 class="text-4xl font-bold text-gray-900 text-center">Collection Salon</h1>
+            <p class="text-center text-gray-600 mt-2">Découvrez notre sélection exclusive de meubles</p>
+        </div>
+    </header>
+
+    <!-- Gallery -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1 - Fauteuil Moderne -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80" 
+                     alt="Fauteuil moderne" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Fauteuil Oslo</h3>
+                        <p class="text-gray-200 mb-3">Design scandinave minimaliste avec accoudoirs en bois massif</p>
+                        <p class="text-xl font-semibold">1 299€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Canapé d'angle -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" 
+                     alt="Canapé d'angle" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Canapé Milano</h3>
+                        <p class="text-gray-200 mb-3">Canapé d'angle modulable en velours premium, confort optimal</p>
+                        <p class="text-xl font-semibold">2 899€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 - Video Canapé -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <video autoplay loop muted playsinline class="rounded-lg">
+                    <source src="https://cdn.coverr.co/videos/coverr-comfortable-living-room-with-sofa-6456/1080p.mp4" type="video/mp4">
+                </video>
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Canapé Heritage</h3>
+                        <p class="text-gray-200 mb-3">Élégance intemporelle avec finitions cuir pleine fleur</p>
+                        <p class="text-xl font-semibold">3 499€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 - Coussins -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800&q=80" 
+                     alt="Coussins décoratifs" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Collection Coussins</h3>
+                        <p class="text-gray-200 mb-3">Assortiment de coussins en lin et coton bio, motifs variés</p>
+                        <p class="text-xl font-semibold">À partir de 49€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 - Fauteuil Club -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" 
+                     alt="Fauteuil club" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Fauteuil Cambridge</h3>
+                        <p class="text-gray-200 mb-3">Style club britannique, cuir patiné vieilli à la main</p>
+                        <p class="text-xl font-semibold">1 799€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 - Canapé 3 places -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80" 
+                     alt="Canapé 3 places" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Canapé Brooklyn</h3>
+                        <p class="text-gray-200 mb-3">3 places contemporain, tissus anti-taches, pieds métal noir</p>
+                        <p class="text-xl font-semibold">1 999€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 - Fauteuil Relax -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80" 
+                     alt="Fauteuil relax" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Fauteuil Zen</h3>
+                        <p class="text-gray-200 mb-3">Fauteuil inclinable avec repose-pieds intégré, microfibre douce</p>
+                        <p class="text-xl font-semibold">899€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 - Video Ambiance -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <video autoplay loop muted playsinline class="rounded-lg">
+                    <source src="https://cdn.coverr.co/videos/coverr-modern-living-room-interior-7527/1080p.mp4" type="video/mp4">
+                </video>
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Ensemble Tokyo</h3>
+                        <p class="text-gray-200 mb-3">Set complet canapé + 2 fauteuils, harmonieux et raffiné</p>
+                        <p class="text-xl font-semibold">4 299€</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 - Méridienne -->
+            <div class="card rounded-lg shadow-lg h-80 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80" 
+                     alt="Méridienne" class="rounded-lg">
+                <div class="card-overlay rounded-lg">
+                    <div class="card-text text-white">
+                        <h3 class="text-2xl font-bold mb-2">Méridienne Versailles</h3>
+                        <p class="text-gray-200 mb-3">Chaise longue élégante, parfaite pour moments de détente</p>
+                        <p class="text-xl font-semibold">1 599€</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+            <p>© 2024 Collection Salon - Showroom exclusif</p>
+            <p class="mt-2 text-sm">Visitez notre showroom pour découvrir nos produits</p>
+        </div>
+    </footer>
+</body>
+</html>

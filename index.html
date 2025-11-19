@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <script src="https://static.readdy.ai/static/e.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Élégance Mobilier - Mobilier de Salon d'Exception</title>
+        <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        <script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B8860B',
+secondary: '#CD853F'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+},
+darkMode: 'class'
+}
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+        <style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=Ultra%20luxurious%20penthouse%20living%20room%20with%20floor-to-ceiling%20windows%2C%20dramatic%20city%20skyline%20view%2C%20premium%20designer%20furniture%2C%20artistic%20lighting%2C%20marble%20and%20gold%20accents%2C%20contemporary%20architecture%2C%20sophisticated%20palette&width=1920&height=1080&seq=hero-penthouse&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.parallax-bg {
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+}
+.glass-effect {
+backdrop-filter: blur(30px);
+background: rgba(255, 255, 255, 0.15);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.gradient-overlay {
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(184, 134, 11, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+.hover-scale {
+transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hover-scale:hover {
+transform: scale(1.05) translateY(-10px);
+box-shadow: 0 40px 80px -20px rgba(184, 134, 11, 0.3);
+}
+.text-shadow {
+text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.floating-card {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+.morphing-bg {
+background: linear-gradient(-45deg, #1a1a1a, #2d1810, #1a1a1a, #3d2817);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.luxury-gradient {
+background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(255, 215, 0, 0.05) 50%, rgba(184, 134, 11, 0.1) 100%);
+}
+.glow-effect {
+box-shadow: 0 0 30px rgba(184, 134, 11, 0.3);
+}
+.image-overlay-luxury {
+background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(184, 134, 11, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+.premium-border {
+border: 2px solid;
+border-image: linear-gradient(45deg, #B8860B, #FFD700, #B8860B) 1;
+}
+        </style>
+    </head>
+    <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <!-- Navigation -->
+        <nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <img src="Capture_d_écran_2025-11-18_185414-removebg-preview.png" style="width: 180px;" alt="Élégance Mobilier">
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                        <a href="galerie.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Galerie</a>
+                        <a href="a-propos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+                        <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <!-- Dark Mode Toggle -->
+                        <button id="theme-toggle" class="w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <div class="w-5 h-5 bg-white dark:bg-gray-900 rounded-full absolute top-0.5 left-0.5 dark:left-6 transition-all duration-300 shadow-md flex items-center justify-center">
+                                <i class="ri-sun-line dark:ri-moon-line text-xs text-gray-600 dark:text-gray-300"></i>
+                            </div>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center">
+                            <i class="ri-menu-line text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+                <div class="px-4 py-2 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Accueil</a>
+                    <a href="galerie.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Galerie</a>
+                    <a href="a-propos.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">À Propos</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Home Page Content -->
+        <div>
+            <!-- Home Page Content -->
+            <div id="home-page">
+                <!-- Hero Section -->
+                <section class="hero-bg min-h-screen flex items-center relative parallax-bg overflow-hidden">
+                    <div class="absolute inset-0 gradient-overlay"></div>
+                    <!-- Floating Elements -->
+                    <div class="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full floating-card blur-xl"></div>
+                    <div class="absolute bottom-40 right-20 w-48 h-48 bg-secondary/20 rounded-full floating-card blur-xl" style="animation-delay: -3s;"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="text-center">
+                            <div class="mb-12 fade-in-up">
+                                <br>
+                                <span class="inline-block bg-primary/20 text-primary px-8 py-4 rounded-full text-lg font-semibold mb-8 glass-effect">
+                                    ✨ Mobilier d'Exception depuis 1990
+                                </span>
+                                <h1 class="text-6xl md:text-8xl lg:text-8xl font-black text-white mb-8 leading-none text-shadow">
+                                    CRÉATEUR DE
+                                    <br>
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">
+                                        RÊVES
+                                    </span>
+                                </h1>
+                                <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-white/95 mb-12 leading-relaxed text-shadow max-w-4xl mx-auto">
+                                    Transformez votre salon en œuvre d'art avec nos créations d'exception
+                                </h2>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16 fade-in-up stagger-2">
+                                <button onclick="showGallery()" class="relative overflow-hidden bg-gradient-to-r from-primary to-yellow-500 text-white px-12 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-105 glow-effect whitespace-nowrap group cursor-pointer">
+                                    <span class="relative z-10">Découvrir la Collection</span>
+                                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                </button>
+                                <button onclick="showContact()" class="glass-effect text-white px-12 py-6 !rounded-button text-xl font-semibold transition-all duration-500 hover:bg-white/20 whitespace-nowrap border border-white/30 cursor-pointer">
+                                    Rendez-vous Privé
+                                </button>
+                            </div>
+                            <!-- Stats Section -->
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto fade-in-up stagger-3 mb-6">
+                                <div class="text-center glass-effect rounded-2xl p-6">
+                                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 counter-animation" data-target="10000">0</div>
+                                    <div class="text-white/90 font-medium">Clients Satisfaits</div>
+                                </div>
+                                <div class="text-center glass-effect rounded-2xl p-6">
+                                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 counter-animation" data-target="164">0</div>
+                                    <div class="text-white/90 font-medium">Créations Uniques</div>
+                                </div>
+                                <div class="text-center glass-effect rounded-2xl p-6">
+                                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 counter-animation" data-target="34">0</div>
+                                    <div class="text-white/90 font-medium">Années d'Excellence</div>
+                                </div>
+                                <div class="text-center glass-effect rounded-2xl p-6">
+                                    <div class="text-4xl md:text-5xl font-black text-primary mb-2 counter-animation" data-target="98">0</div>
+                                    <div class="text-white/90 font-medium">% Satisfaction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- About Section -->
+                <section class="py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
+                    <div class="absolute inset-0 luxury-gradient"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-20">
+                            <div class="inline-block mb-8">
+                                <span class="text-primary text-lg font-medium tracking-wider uppercase">Heritage & Innovation</span>
+                                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2"></div>
+                            </div>
+                            <h2 class="text-8xl font-bold mb-8 text-gray-900 dark:text-white">
+                                SAVOIR-FAIRE
+                                <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">
+                                    SENEGALAISE
+                                </span>
+                            </h2>
+                            <p class="text-1xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                                Trois décennies d'excellence artisanale où tradition séculaire et vision avant-gardiste se rencontrent pour créer l'exceptionnel
+                            </p>
+                        </div>
+                        <div class="grid lg:grid-cols-3 gap-8 mb-20">
+                            <div class="relative group">
+                                <div class="premium-border rounded-3xl overflow-hidden hover-scale">
+                                    <div class="relative h-96 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Master%20French%20artisan%20in%20luxury%20workshop%20creating%20premium%20furniture%2C%20traditional%20hand%20tools%2C%20exquisite%20woodworking%2C%20atmospheric%20lighting%2C%20centuries-old%20craftsmanship%20techniques&width=400&height=500&seq=craft-master&orientation=portrait" alt="Artisanat Français" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                                <i class="ri-hammer-line text-white text-xl"></i>
+                                            </div>
+                                            <span class="text-primary text-sm font-medium">MAÎTRISE</span>
+                                        </div>
+                                        <h3 class="text-3xl font-bold mb-3">Savoir-Faire Séculaire</h3>
+                                        <p class="text-white/90 text-lg">Nos maîtres artisans perpétuent 300 ans de tradition française</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <div class="premium-border rounded-3xl overflow-hidden hover-scale">
+                                    <div class="relative h-96 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Ultra-modern%20luxury%20furniture%20showroom%20with%20architectural%20lighting%2C%20premium%20displays%2C%20sophisticated%20interior%20design%2C%20marble%20floors%2C%20contemporary%20retail%20experience%2C%20Paris%20elegance&width=400&height=500&seq=showroom-ultra&orientation=portrait" alt="Showroom Élégance" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                                <i class="ri-building-line text-white text-xl"></i>
+                                            </div>
+                                            <span class="text-primary text-sm font-medium">EXPÉRIENCE</span>
+                                        </div>
+                                        <h3 class="text-3xl font-bold mb-3">Temple Parisien</h3>
+                                        <p class="text-white/90 text-lg">2000m² d'émotion sur les Champs-Élysées</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <div class="premium-border rounded-3xl overflow-hidden hover-scale">
+                                    <div class="relative h-96 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Luxury%20materials%20collection%20display%2C%20rare%20exotic%20woods%2C%20premium%20Italian%20leather%2C%20precious%20fabrics%2C%20marble%20samples%2C%20gold%20accents%2C%20sophisticated%20material%20showcase%2C%20artistic%20composition&width=400&height=500&seq=materials-luxury&orientation=portrait" alt="Matériaux Premium" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                                <i class="ri-diamond-line text-white text-xl"></i>
+                                            </div>
+                                            <span class="text-primary text-sm font-medium">EXCELLENCE</span>
+                                        </div>
+                                        <h3 class="text-3xl font-bold mb-3">Matières Rares</h3>
+                                        <p class="text-white/90 text-lg">Cuirs Hermès, bois précieux, marbres de Carrare</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-2 gap-16 items-center">
+                            <div class="space-y-8">
+                                <div class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                            <i class="ri-award-line text-white text-xl"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">30 Ans d'Excellence</h3>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                                        Une expertise reconnue dans la création de mobilier haut de gamme, avec plus de 10 000 clients satisfaits à travers l'Europe.
+                                    </p>
+                                </div>
+                                <div class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                            <i class="ri-star-line text-white text-xl"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Garantie à Vie</h3>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                                        Tous nos meubles bénéficient d'une garantie à vie sur la structure et de 10 ans sur les revêtements.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6">
+                                <img src="https://readdy.ai/api/search-image?query=Elegant%20living%20room%20interior%20with%20premium%20furniture%20arrangement%2C%20sophisticated%20styling%2C%20luxury%20home%20decor%2C%20warm%20ambient%20lighting%2C%20contemporary%20French%20design&width=300&height=400&seq=interior-1&orientation=portrait" alt="Intérieur Élégant" class="w-full h-80 object-cover rounded-3xl shadow-2xl hover-scale">
+                                <img src="https://readdy.ai/api/search-image?query=Close-up%20details%20of%20luxury%20furniture%20craftsmanship%2C%20premium%20stitching%2C%20quality%20materials%2C%20artisanal%20finishes%2C%20sophisticated%20design%20elements&width=300&height=400&seq=details-1&orientation=portrait" alt="Détails Artisanaux" class="w-full h-80 object-cover rounded-3xl shadow-2xl hover-scale mt-12">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Categories Section -->
+                <section class="py-40 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+                    <div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=Luxury%20interior%20architecture%20background%2C%20sophisticated%20geometric%20patterns%2C%20elegant%20textures%2C%20premium%20materials%2C%20subtle%20golden%20accents%2C%20refined%20atmosphere&width=1920&height=1080&seq=bg-architecture&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.15;"></div>
+                    <!-- Animated Background Elements -->
+                    <div class="absolute top-20 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl floating-card"></div>
+                    <div class="absolute bottom-20 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl floating-card" style="animation-delay: -4s;"></div>
+                    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-24">
+                            <div class="inline-block mb-8">
+                                <span class="text-primary text-lg font-medium tracking-widest uppercase">Collections</span>
+                                <div class="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3"></div>
+                            </div>
+                            <h2 class="text-8xl md:text-9xl font-black mb-12 text-white leading-none">
+                                UNIVERS
+                                <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">
+                                    EXCLUSIFS
+                                </span>
+                            </h2>
+                            <p class="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+                                Trois mondes distincts, une même philosophie : sublimer votre art de vivre
+                            </p>
+                        </div>
+                        <div class="grid lg:grid-cols-3 gap-12">
+                            <div class="group cursor-pointer">
+                                <a href="galerie.html" class="block">
+                                    <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                        <div class="h-96 overflow-hidden">
+                                            <img src="https://readdy.ai/api/search-image?query=Collection%20of%20luxury%20armchairs%20in%20sophisticated%20showroom%20setting%2C%20various%20styles%20from%20classic%20to%20contemporary%2C%20premium%20upholstery%2C%20elegant%20lighting%2C%20refined%20interior%20design&width=500&height=600&seq=category-fauteuils-new&orientation=portrait" alt="Collection Fauteuils" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                        </div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                            <h3 class="text-3xl font-bold mb-4">Fauteuils d'Exception</h3>
+                                            <p class="text-white/90 text-lg mb-6 leading-relaxed">Du fauteuil bergère au design contemporain, découvrez 47 modèles uniques</p>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center text-primary font-semibold text-lg">
+                                                    <span>Découvrir la Collection</span>
+                                                    <i class="ri-arrow-right-line ml-2"></i>
+                                                </div>
+                                                <div class="text-white/70">À partir de 1 890 €</div>
+                                            </div>
+                                        </div>
+                                        <div class="absolute top-6 right-6 bg-white/20 glass-effect rounded-full px-4 py-2 text-white font-semibold">
+                                            47 modèles
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <a href="galerie.html" class="block">
+                                    <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                        <div class="h-96 overflow-hidden">
+                                            <img src="https://readdy.ai/api/search-image?query=Luxurious%20sofa%20collection%20in%20elegant%20showroom%2C%20various%20contemporary%20and%20classic%20designs%2C%20premium%20upholstery%2C%20sophisticated%20lighting%2C%20high-end%20furniture%20display&width=500&height=600&seq=category-canapes-new&orientation=portrait" alt="Collection Canapés" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                        </div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                            <h3 class="text-3xl font-bold mb-4">Canapés de Prestige</h3>
+                                            <p class="text-white/90 text-lg mb-6 leading-relaxed">Du 2 places au grand angle, des créations qui transforment votre salon</p>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center text-primary font-semibold text-lg">
+                                                    <span>Découvrir la Collection</span>
+                                                    <i class="ri-arrow-right-line ml-2"></i>
+                                                </div>
+                                                <div class="text-white/70">À partir de 3 250 €</div>
+                                            </div>
+                                        </div>
+                                        <div class="absolute top-6 right-6 bg-white/20 glass-effect rounded-full px-4 py-2 text-white font-semibold">
+                                            32 modèles
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="group cursor-pointer">
+                                <a href="galerie.html" class="block">
+                                    <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
+                                        <div class="h-96 overflow-hidden">
+                                            <img src="https://readdy.ai/api/search-image?query=Luxury%20living%20room%20accessories%20collection%2C%20premium%20cushions%2C%20designer%20coffee%20tables%2C%20elegant%20decorative%20objects%2C%20sophisticated%20styling%2C%20high-end%20home%20decor%20display&width=500&height=600&seq=category-accessoires-new&orientation=portrait" alt="Collection Accessoires" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                        </div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                                            <h3 class="text-3xl font-bold mb-4">Art de Vivre</h3>
+                                            <p class="text-white/90 text-lg mb-6 leading-relaxed">Tables basses, coussins et objets déco pour sublimer votre intérieur</p>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center text-primary font-semibold text-lg">
+                                                    <span>Découvrir la Collection</span>
+                                                    <i class="ri-arrow-right-line ml-2"></i>
+                                                </div>
+                                                <div class="text-white/70">À partir de 180 €</div>
+                                            </div>
+                                        </div>
+                                        <div class="absolute top-6 right-6 bg-white/20 glass-effect rounded-full px-4 py-2 text-white font-semibold">
+                                            85+ pièces
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Featured Products -->
+                <section class="py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-20">
+                            <h2 class="text-6xl font-bold mb-8 text-gray-900 dark:text-white">Coups de Cœur</h2>
+                            <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                                Les créations qui séduisent nos clients les plus exigeants
+                            </p>
+                        </div>
+                        <div class="grid lg:grid-cols-2 gap-16 mb-20">
+                            <div class="relative group overflow-hidden rounded-3xl shadow-2xl">
+                                <img src="https://readdy.ai/api/search-image?query=Luxury%20velvet%20armchair%20in%20sophisticated%20interior%20setting%2C%20dramatic%20lighting%2C%20rich%20blue%20color%2C%20premium%20upholstery%2C%20elegant%20living%20room%20environment%2C%20professional%20photography&width=600&height=700&seq=featured-main-1&orientation=portrait" alt="Fauteuil Vedette" class="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-8 left-8 right-8 text-white">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <span class="bg-primary px-4 py-2 rounded-full text-sm font-semibold">Bestseller</span>
+                                        <span class="text-3xl font-bold">2 890 €</span>
+                                    </div>
+                                    <h3 class="text-3xl font-bold mb-3">Fauteuil Velours Bleu</h3>
+                                    <p class="text-white/90 text-lg">Le parfait équilibre entre confort moderne et élégance classique</p>
+                                </div>
+                            </div>
+                            <div class="space-y-8">
+                                <div class="grid grid-cols-2 gap-8">
+                                    <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                                        <img src="https://readdy.ai/api/search-image?query=Modern%20gray%20sofa%20in%20contemporary%20setting%2C%20clean%20design%2C%20premium%20fabric%2C%20elegant%20living%20room%2C%20sophisticated%20furniture%20piece%2C%20professional%20photography&width=300&height=250&seq=featured-2&orientation=landscape" alt="Canapé Moderne" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-black/40"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                                            <h4 class="text-lg font-bold">Canapé Moderne</h4>
+                                            <p class="text-primary font-semibold">4 250 €</p>
+                                        </div>
+                                    </div>
+                                    <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                                        <img src="https://readdy.ai/api/search-image?query=Elegant%20marble%20coffee%20table%20with%20gold%20accents%2C%20luxury%20interior%2C%20sophisticated%20design%2C%20premium%20materials%2C%20modern%20living%20room%20furniture&width=300&height=250&seq=featured-3&orientation=landscape" alt="Table Basse Marbre" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-black/40"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                                            <h4 class="text-lg font-bold">Table Marbre</h4>
+                                            <p class="text-primary font-semibold">1 650 €</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
+                                            <i class="ri-thumb-up-line text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">98% de Satisfaction</h3>
+                                            <p class="text-gray-600 dark:text-gray-300">Plus de 2 500 avis clients 5 étoiles</p>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 text-center">
+                                        <div>
+                                            <div class="text-3xl font-bold text-primary mb-2">47</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Fauteuils</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-3xl font-bold text-primary mb-2">32</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Canapés</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-3xl font-bold text-primary mb-2">85+</div>
+                                            <div class="text-sm text-gray-600 dark:text-gray-400">Accessoires</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="group">
+                                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Luxury%20velvet%20armchair%20in%20deep%20blue%20color%2C%20elegant%20curved%20design%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20piece%2C%20clean%20white%20background%2C%20professional%20product%20photography&width=300&height=300&seq=product-1&orientation=squarish" alt="Fauteuil Velours Bleu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Fauteuil Velours Bleu</h3>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Élégance et confort premium</p>
+                                        <p class="text-2xl font-bold text-primary">2 890 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Modern%20three-seat%20sofa%20in%20light%20gray%20fabric%2C%20contemporary%20design%2C%20clean%20lines%2C%20premium%20upholstery%2C%20sophisticated%20living%20room%20furniture%2C%20clean%20white%20background%2C%20professional%20photography&width=300&height=300&seq=product-2&orientation=squarish" alt="Canapé Moderne Gris" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Canapé Moderne Gris</h3>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Design contemporain 3 places</p>
+                                        <p class="text-2xl font-bold text-primary">4 250 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Elegant%20round%20coffee%20table%20with%20marble%20top%20and%20gold%20metal%20legs%2C%20luxury%20living%20room%20furniture%2C%20sophisticated%20design%2C%20clean%20white%20background%2C%20professional%20product%20photography&width=300&height=300&seq=product-3&orientation=squarish" alt="Table Basse Marbre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Table Basse Marbre</h3>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Marbre blanc et pieds dorés</p>
+                                        <p class="text-2xl font-bold text-primary">1 650 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                                    <div class="h-64 overflow-hidden">
+                                        <img src="https://readdy.ai/api/search-image?query=Set%20of%20luxury%20decorative%20cushions%20in%20various%20textures%20and%20neutral%20colors%2C%20elegant%20home%20accessories%2C%20premium%20fabrics%2C%20sophisticated%20interior%20styling%2C%20clean%20white%20background%2C%20professional%20photography&width=300&height=300&seq=product-4&orientation=squarish" alt="Collection Coussins" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Collection Coussins</h3>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Set de 4 coussins assortis</p>
+                                        <p class="text-2xl font-bold text-primary">320 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer class="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-['Pacifico'] text-primary mb-4">Élégance</h3>
+                            <p class="text-gray-300 mb-4">Mobilier de salon d'exception depuis 1990</p>
+                            <div class="flex space-x-4">
+                                <div class="w-8 h-8 flex items-center justify-center">
+                                    <i class="ri-facebook-fill text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                                </div>
+                                <div class="w-8 h-8 flex items-center justify-center">
+                                    <i class="ri-instagram-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                                </div>
+                                <div class="w-8 h-8 flex items-center justify-center">
+                                    <i class="ri-pinterest-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a>
+                                </li>
+                                <li>
+                                    <a href="a-propos.html" class="text-gray-300 hover:text-primary transition-colors">À Propos</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Catégories</h4>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Fauteuils</a>
+                                </li>
+                                <li>
+                                    <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Canapés</a>
+                                </li>
+                                <li>
+                                    <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Accessoires</a>
+                                </li>
+                                <li>
+                                    <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Tables Basses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-300">123 Avenue des Champs-Élysées, Paris</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-300">+33 1 42 86 17 20</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                        <i class="ri-mail-line text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-300">contact@elegance-mobilier.fr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                        <p class="text-gray-400">&copy; 2024 Élégance Mobilier. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </footer>
+            <script>
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+html.classList.add('dark');
+}
+themeToggle.addEventListener('click', function() {
+html.classList.toggle('dark');
+const isDark = html.classList.contains('dark');
+localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+});
+            </script>
+            <script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <script src="https://static.readdy.ai/static/e.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Élégance Mobilier - Mobilier de Salon d'Exception</title>
+        <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        <script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#B8860B',
+secondary: '#CD853F'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+},
+darkMode: 'class'
+}
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+        <style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+.glass-effect {
+backdrop-filter: blur(30px);
+background: rgba(255, 255, 255, 0.15);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.hover-scale {
+transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hover-scale:hover {
+transform: scale(1.05) translateY(-10px);
+box-shadow: 0 40px 80px -20px rgba(184, 134, 11, 0.3);
+}
+.text-shadow {
+text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.floating-card {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+.glow-effect {
+box-shadow: 0 0 30px rgba(184, 134, 11, 0.3);
+}
+.premium-border {
+border: 2px solid;
+border-image: linear-gradient(45deg, #B8860B, #FFD700, #B8860B) 1;
+}
+        </style>
+    </head>
+    <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <!-- Navigation -->
+        <nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html">
+                            <img src="Capture_d_écran_2025-11-18_185414-removebg-preview.png" style="width: 180px;" alt="Élégance Mobilier">
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                        <a href="galerie.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">Galerie</a>
+                        <a href="a-propos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+                        <a href="contact.html" class="text-primary font-medium">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <!-- Dark Mode Toggle -->
+                        <button id="theme-toggle" class="w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <div class="w-5 h-5 bg-white dark:bg-gray-900 rounded-full absolute top-0.5 left-0.5 dark:left-6 transition-all duration-300 shadow-md flex items-center justify-center">
+                                <i class="ri-sun-line dark:ri-moon-line text-xs text-gray-600 dark:text-gray-300"></i>
+                            </div>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center">
+                            <i class="ri-menu-line text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+                <div class="px-4 py-2 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Accueil</a>
+                    <a href="galerie.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Galerie</a>
+                    <a href="a-propos.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary">À Propos</a>
+                    <a href="contact.html" class="block px-3 py-2 text-primary font-medium">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Page Content -->
+        <div>
+            <!-- Hero Section Contact -->
+            <section class="relative h-96 overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Luxury%20furniture%20showroom%20exterior%20on%20Champs-Elysees%20Paris%2C%20elegant%20storefront%20with%20premium%20displays%2C%20sophisticated%20architecture%2C%20golden%20hour%20lighting%2C%20prestigious%20retail%20environment%2C%20artistic%20composition&width=1920&height=600&seq=contact-hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                    <div class="text-center w-full">
+                        <div class="inline-block mb-6">
+                            <span class="text-primary text-lg font-medium tracking-widest uppercase">Nous Rencontrer</span>
+                            <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2"></div>
+                        </div>
+                        <h1 class="text-6xl md:text-8xl font-black text-white mb-6 leading-none text-shadow">
+                            CONTACT &
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">SHOWROOM</span>
+                        </h1>
+                        <p class="text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+                            Découvrez nos créations dans notre écrin parisien de 2000m² sur les Champs-Élysées
+                        </p>
+                    </div>
+                </div>
+                <!-- Floating geometric elements -->
+                <div class="absolute top-20 left-20 w-32 h-32 border-2 border-primary/30 rounded-full floating-card"></div>
+                <div class="absolute bottom-20 right-20 w-24 h-24 bg-primary/20 rounded-full floating-card blur-sm" style="animation-delay: -2s;"></div>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-3 gap-12 mb-20">
+                        <div class="text-center group">
+                            <div class="relative mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                    <i class="ri-map-pin-line text-white text-3xl"></i>
+                                </div>
+                                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Showroom Parisien</h3>
+                            <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                                <p class="text-lg font-medium">123 Avenue des Champs-Élysées</p>
+                                <p>75008 Paris, France</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Métro : Franklin D. Roosevelt</p>
+                            </div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="relative mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                    <i class="ri-phone-line text-white text-3xl"></i>
+                                </div>
+                                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Nous Appeler</h3>
+                            <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                                <p class="text-lg font-medium">+33 1 42 86 17 20</p>
+                                <p>Service Client Premium</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Lun-Sam : 10h-19h</p>
+                            </div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="relative mb-8">
+                                <div class="w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                    <i class="ri-mail-line text-white text-3xl"></i>
+                                </div>
+                                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Nous Écrire</h3>
+                            <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                                <p class="text-lg font-medium">contact@elegance-mobilier.fr</p>
+                                <p>Réponse sous 2h ouvrées</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Service personnalisé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form & Map -->
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-12">
+                            <div class="mb-8">
+                                <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Demande de Rendez-vous</h2>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                                    Bénéficiez d'un conseil personnalisé avec nos experts en mobilier de luxe
+                                </p>
+                            </div>
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Prénom *</label>
+                                        <input
+                                            type="text"
+                                            name="prenom"
+                                            required
+                                            class="w-full px-4 py-4 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg"
+                                        >
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Nom *</label>
+                                        <input
+                                            type="text"
+                                            name="nom"
+                                            required
+                                            class="w-full px-4 py-4 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg"
+                                        >
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Email *</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-4 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg"
+                                    >
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Téléphone</label>
+                                    <input type="tel" name="telephone" class="w-full px-4 py-4 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Type de projet</label>
+                                    <select name="type_projet" class="w-full px-4 py-4 pr-8 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg">
+                                        <option value="">Sélectionnez votre projet</option>
+                                        <option value="salon_complet">Aménagement salon complet</option>
+                                        <option value="fauteuils">Recherche de fauteuils</option>
+                                        <option value="canapes">Sélection de canapés</option>
+                                        <option value="accessoires">Accessoires et objets déco</option>
+                                        <option value="conseil">Conseil en décoration</option>
+                                        <option value="autre">Autre demande</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Votre message *</label>
+                                    <textarea
+                                        name="message"
+                                        required
+                                        rows="5"
+                                        maxlength="500"
+                                        class="w-full px-4 py-4 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg resize-vertical"
+                                        placeholder="Décrivez-nous votre projet et vos attentes..."
+                                    ></textarea>
+                                    <div class="text-right text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                        <span id="char-count">0</span>
+                                        /500 caractères
+                                    </div>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-8 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-[1.02] glow-effect whitespace-nowrap shadow-2xl">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <span>Envoyer ma Demande</span>
+                                        <div class="w-6 h-6 flex items-center justify-center">
+                                            <i class="ri-send-plane-line"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Interactive Map -->
+                        <div class="relative">
+                            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden h-full min-h-[600px]">
+                                <div class="h-80 relative overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                                    <div class="absolute inset-0 bg-primary/20"></div>
+                                    <div class="absolute top-6 left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                                                <i class="ri-map-pin-line text-white text-lg"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-gray-900 dark:text-white">Élégance Mobilier</div>
+                                                <div class="text-sm text-gray-600 dark:text-gray-300">Champs-Élysées</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-8">
+                                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Horaires d'Ouverture</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
+                                            <span class="font-medium text-gray-900 dark:text-white">Lundi - Vendredi</span>
+                                            <span class="text-primary font-semibold">10h00 - 19h00</span>
+                                        </div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
+                                            <span class="font-medium text-gray-900 dark:text-white">Samedi</span>
+                                            <span class="text-primary font-semibold">10h00 - 18h00</span>
+                                        </div>
+                                        <div class="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
+                                            <span class="font-medium text-gray-900 dark:text-white">Dimanche</span>
+                                            <span class="text-gray-500 dark:text-gray-400">Fermé</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl">
+                                        <div class="flex items-start gap-4">
+                                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1">
+                                                <i class="ri-information-line text-white text-lg"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-bold text-gray-900 dark:text-white mb-2">Rendez-vous VIP</h4>
+                                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                                    Bénéficiez d'un accueil personnalisé avec champagne et conseils d'experts en prenant rendez-vous.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="py-24 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+                <div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=Luxury%20service%20experience%20background%2C%20elegant%20interior%20design%20consultation%2C%20premium%20customer%20care%2C%20sophisticated%20atmosphere%2C%20artistic%20composition&width=1920&height=800&seq=services-bg&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.15;"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-6xl font-black text-white mb-8 leading-tight">
+                            NOS SERVICES
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">PREMIUM</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Une expérience client d'exception à chaque étape de votre projet
+                        </p>
+                    </div>
+                    <div class="grid lg:grid-cols-3 gap-8">
+                        <div class="group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white/5 backdrop-blur-sm">
+                                <div class="p-8 text-center">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <i class="ri-user-star-line text-white text-3xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Conseil Personnel</h3>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Un expert dédié vous accompagne dans le choix de vos meubles selon vos goûts et votre intérieur.
+                                    </p>
+                                    <ul class="text-left space-y-2 text-gray-400">
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Étude personnalisée gratuite</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Conseils déco inclus</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Suivi projet complet</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white/5 backdrop-blur-sm">
+                                <div class="p-8 text-center">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <i class="ri-truck-line text-white text-3xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Livraison VIP</h3>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Livraison et installation par nos équipes spécialisées dans toute la France et l'Europe.
+                                    </p>
+                                    <ul class="text-left space-y-2 text-gray-400">
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Livraison gantée premium</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Installation professionnelle</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Emballage et protection</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="premium-border rounded-3xl overflow-hidden hover-scale bg-white/5 backdrop-blur-sm">
+                                <div class="p-8 text-center">
+                                    <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <i class="ri-shield-star-line text-white text-3xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Garantie Exclusive</h3>
+                                    <p class="text-gray-300 leading-relaxed mb-6">
+                                        Protection complète de votre investissement avec notre garantie exceptionnelle.
+                                    </p>
+                                    <ul class="text-left space-y-2 text-gray-400">
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>Garantie à vie structure</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>10 ans revêtements</span>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <div class="w-4 h-4 flex items-center justify-center">
+                                                <i class="ri-check-line text-primary"></i>
+                                            </div>
+                                            <span>SAV prioritaire</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-['Pacifico'] text-primary mb-4">Élégance</h3>
+                        <p class="text-gray-300 mb-4">Mobilier de salon d'exception depuis 1990</p>
+                        <div class="flex space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-facebook-fill text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-instagram-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-pinterest-line text-xl text-gray-400 hover:text-primary transition-colors cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Galerie</a>
+                            </li>
+                            <li>
+                                <a href="a-propos.html" class="text-gray-300 hover:text-primary transition-colors">À Propos</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Catégories</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Fauteuils</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Canapés</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Accessoires</a>
+                            </li>
+                            <li>
+                                <a href="galerie.html" class="text-gray-300 hover:text-primary transition-colors">Tables Basses</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">123 Avenue des Champs-Élysées, Paris</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">+33 1 42 86 17 20</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <span class="text-gray-300">contact@elegance-mobilier.fr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                    <p class="text-gray-400">&copy; 2024 Élégance Mobilier. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+html.classList.add('dark');
+}
+themeToggle.addEventListener('click', function() {
+html.classList.toggle('dark');
+const isDark = html.classList.contains('dark');
+localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+});
+        </script>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+        </script>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+const messageTextarea = document.querySelector('textarea[name="message"]');
+const charCount = document.getElementById('char-count');
+
+if (messageTextarea && charCount) {
+messageTextarea.addEventListener('input', function() {
+const currentLength = this.value.length;
+charCount.textContent = currentLength;
+if (currentLength > 500) {
+this.value = this.value.substring(0, 500);
+charCount.textContent = '500';
+}
+});
+}
+
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const message = formData.get('message');
+
+if (message && message.length > 500) {
+showNotification('Le message ne peut pas dépasser 500 caractères.', 'error');
+return;
+}
+
+const requiredFields = ['prenom', 'nom', 'email', 'message'];
+let isValid = true;
+for (const field of requiredFields) {
+const value = formData.get(field);
+if (!value || value.trim() === '') {
+isValid = false;
+break;
+}
+}
+
+if (!isValid) {
+showNotification('Veuillez remplir tous les champs obligatoires.', 'error');
+return;
+}
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(formData.get('email'))) {
+showNotification('Veuillez saisir une adresse email valide.', 'error');
+return;
+}
+
+showNotification('Votre demande a été envoyée avec succès ! Nous vous répondrons dans les plus brefs délais.', 'success');
+this.reset();
+if (charCount) charCount.textContent = '0';
+});
+}
+
+function showNotification(message, type) {
+const notification = document.createElement('div');
+notification.className = `fixed top-4 right-4 z-50 px-6 py-4 rounded-xl shadow-2xl transition-all duration-500 transform translate-x-full ${
+type === 'success'
+? 'bg-green-500 text-white'
+: 'bg-red-500 text-white'
+}`;
+notification.innerHTML = `
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-${type === 'success' ? 'check' : 'error-warning'}-line text-xl"></i>
+</div>
+<span class="font-medium">${message}</span>
+</div>
+`;
+
+document.body.appendChild(notification);
+
+setTimeout(() => {
+notification.classList.remove('translate-x-full');
+}, 100);
+
+setTimeout(() => {
+notification.classList.add('translate-x-full');
+setTimeout(() => {
+document.body.removeChild(notification);
+}, 500);
+}, 5000);
+}
+});
+        </script>
+    </body>
+</html>
