@@ -81,7 +81,7 @@ animation: gradient 15s ease infinite;
 background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(184, 134, 11, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-/* Mobile Bottom Tabs */
+/* Mobile Bottom Tabs - Pour téléphones ET tablettes */
 .mobile-bottom-tabs {
 position: fixed;
 bottom: 0;
@@ -237,6 +237,7 @@ transition: all 0.3s ease;
 color: white;
 }
 
+/* Afficher les filtres mobiles pour téléphones ET tablettes */
 @media (max-width: 1024px) {
 .mobile-bottom-tabs {
 display: flex;
@@ -250,6 +251,7 @@ min-height: 500px;
 }
 }
 
+/* Ajustements pour petits téléphones */
 @media (max-width: 640px) {
 .mobile-bottom-tabs {
 padding: 10px 12px 14px;
@@ -273,6 +275,16 @@ height: 60px;
 }
 .video-play-button i {
 font-size: 1.5rem;
+}
+}
+
+/* Cacher les filtres mobiles uniquement sur desktop */
+@media (min-width: 1025px) {
+.mobile-bottom-tabs {
+display: none !important;
+}
+.products-section {
+padding-bottom: 0 !important;
 }
 }
         </style>
@@ -317,7 +329,8 @@ font-size: 1.5rem;
                 </div>
             </div>
         </nav>
-        <!-- Mobile Bottom Tabs -->
+
+        <!-- Mobile Bottom Tabs - Pour téléphones ET tablettes -->
         <div class="mobile-bottom-tabs">
             <button onclick="filterProducts('tous')" class="mobile-tab active" data-category="tous">
                 <div class="mobile-tab-icon">
@@ -344,48 +357,10 @@ font-size: 1.5rem;
                 <span>Accessoires</span>
             </button>
         </div>
+
         <!-- Gallery Page Content -->
         <div>
-            <!-- Video Hero Section -->
-            <!-- <section class="video-hero-container">
-                <video autoplay muted loop playsinline class="video-hero" id="showroom-video">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.mp4" type="video/mp4">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.webm" type="video/webm">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-                <div class="video-overlay"></div>
-                <div class="video-content">
-                    <div class="text-center text-white px-4 max-w-4xl">
-                        <div class="inline-block mb-8">
-                            <span class="inline-block bg-primary/30 text-white px-8 py-4 rounded-full text-lg font-semibold mb-6 glass-effect border border-white/20">
-                                ✨ Collection Exclusive 2024
-                            </span>
-                        </div>
-                        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none text-shadow">
-                            GALERIE
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary block mt-4 md:mt-6">
-                                PRESTIGE
-                            </span>
-                        </h1>
-                        <p class="text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light mb-12">
-                            Découvrez l'excellence dans notre showroom d'exception
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <button onclick="filterProducts('tous')" class="bg-gradient-to-r from-primary to-yellow-500 text-white px-16 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-105 glow-effect whitespace-nowrap shadow-2xl">
-                                Explorer la Collection
-                            </button>
-                            <button class="video-play-button" onclick="toggleVideo()">
-                                <i class="ri-play-fill"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full floating-card blur-xl"></div>
-                <div class="absolute bottom-20 right-10 w-48 h-48 bg-secondary/20 rounded-full floating-card blur-xl" style="animation-delay: -3s;"></div>
-            </section> -->
-            <!-- Advanced Filters Section -->
+            <!-- Hero Section avec image de fond -->
             <section class="relative h-94 overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Ultra%20luxurious%20furniture%20showroom%20interior%20with%20dramatic%20architectural%20lighting%2C%20premium%20displays%2C%20marble%20floors%2C%20sophisticated%20retail%20environment%2C%20contemporary%20design%2C%20artistic%20composition&width=1920&height=600&seq=gallery-hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
                 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -400,6 +375,8 @@ font-size: 1.5rem;
                 <div class="absolute top-20 left-20 w-32 h-32 border-2 border-primary/30 rounded-full floating-card"></div>
                 <div class="absolute bottom-20 right-20 w-24 h-24 bg-primary/20 rounded-full floating-card blur-sm" style="animation-delay: -2s;"></div>
             </section>
+
+            <!-- Advanced Filters Section -->
             <section class="py-16 bg-white dark:bg-gray-800 products-section">
                 <span style="display: flex; justify-content: center;" class="inline-block bg-primary/20 text-primary px-6 py-3 rounded-full text-sm font-semibold mb-6 glass-effect">
                     ✨ Collection Exclusive 2025
@@ -442,6 +419,7 @@ font-size: 1.5rem;
                                     </div>
                                 </button>
                             </div>
+
                             <!-- View Toggle & Sort -->
                             <div class="flex items-center gap-4 justify-center lg:justify-end">
                                 <div class="flex bg-white dark:bg-gray-700 rounded-xl p-1 shadow-lg">
@@ -465,13 +443,17 @@ font-size: 1.5rem;
                             </div>
                         </div>
                     </div>
+
                     <!-- Products Grid -->
                     <div id="products-container" class="relative">
                         <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 transition-all duration-500">
-                            <!-- Products will be populated by JavaScript --></div>
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
                         <div id="products-list" class="hidden space-y-6">
-                            <!-- List view will be populated by JavaScript --></div>
+                            <!-- List view will be populated by JavaScript -->
+                        </div>
                     </div>
+
                     <!-- Load More Button -->
                     <div class="text-center mt-16">
                         <button id="load-more" class="bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 !rounded-button text-lg font-semibold transition-all duration-500 hover:scale-105 glow-effect whitespace-nowrap">
@@ -485,8 +467,10 @@ font-size: 1.5rem;
                     </div>
                 </div>
             </section>
+
+            <!-- Le reste du code reste identique... -->
             <!-- Featured Collections -->
-            <section style="margin-top: -60px;" class="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+            <section class="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
                         <h2 class="text-5xl font-black mb-6 text-gray-900 dark:text-white">
@@ -501,7 +485,7 @@ font-size: 1.5rem;
                         <!-- Collection 1 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Luxury%20living%20room%20with%20elegant%20furniture%20arrangement%2C%20sophisticated%20interior%20design%2C%20premium%20decor%2C%20warm%20lighting%2C%20contemporary%20French%20style%2C%20artistic%20composition&width=500&height=600&seq=inspiration-1&orientation=portrait" alt="Collection Moderne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Luxury%20modern%20minimalist%20living%20room%20with%20neutral%20tones%2C%20clean%20lines%2C%20premium%20materials%2C%20Scandinavian%20inspiration%2C%20sophisticated%20interior%20design&width=500&height=400&seq=collection-modern&orientation=landscape" alt="Collection Moderne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -518,7 +502,7 @@ font-size: 1.5rem;
                         <!-- Collection 2 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Classic%20luxury%20living%20room%20with%20traditional%20furniture%2C%20sophisticated%20decor%2C%20rich%20colors%2C%20elegant%20styling%2C%20premium%20interior%20design%2C%20artistic%20photography&width=500&height=600&seq=inspiration-2&orientation=portrait" alt="Collection Classique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Classic%20French%20luxury%20living%20room%20with%20traditional%20furniture%2C%20rich%20woods%2C%20elegant%20fabrics%2C%20heritage%20design%2C%20sophisticated%20classical%20interior&width=500&height=400&seq=collection-classic&orientation=landscape" alt="Collection Classique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -535,7 +519,7 @@ font-size: 1.5rem;
                         <!-- Collection 3 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Minimalist%20luxury%20living%20room%20with%20Scandinavian%20influence%2C%20clean%20design%2C%20premium%20furniture%2C%20sophisticated%20styling%2C%20natural%20lighting%2C%20artistic%20composition&width=500&height=600&seq=inspiration-3&orientation=portrait" alt="Collection Art Déco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Art%20Deco%20inspired%20luxury%20interior%20with%20geometric%20patterns%2C%20rich%20materials%2C%20gold%20accents%2C%20vintage%20elegance%2C%20sophisticated%20retro%20design&width=500&height=400&seq=collection-artdeco&orientation=landscape" alt="Collection Art Déco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -552,6 +536,7 @@ font-size: 1.5rem;
                     </div>
                 </div>
             </section>
+
             <!-- Quick View Modal -->
             <div id="quick-view-modal" class="fixed inset-0 z-50 hidden">
                 <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
@@ -561,11 +546,13 @@ font-size: 1.5rem;
                             <i class="ri-close-line text-xl"></i>
                         </button>
                         <div id="modal-content" class="p-8">
-                            <!-- Modal content will be populated by JavaScript --></div>
+                            <!-- Modal content will be populated by JavaScript -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Footer -->
         <footer class="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -648,6 +635,8 @@ font-size: 1.5rem;
                 </div>
             </div>
         </footer>
+
+        <!-- Le reste du JavaScript reste identique... -->
         <script>
 // Video control function
 function toggleVideo() {
@@ -679,6 +668,7 @@ localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 });
         </script>
+
         <script>
 document.addEventListener('DOMContentLoaded', function() {
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -688,24 +678,25 @@ mobileMenu.classList.toggle('hidden');
 });
 });
         </script>
+
         <script>
 const products = [
-{ id: 1, name: 'Fauteuil Velours Bleu Impérial', category: 'fauteuils', price: '2 890 €', priceNum: 2890, description: 'Élégance intemporelle et confort premium', image: 'https://readdy.ai/api/search-image?query=Luxury%20velvet%20armchair%20in%20deep%20royal%20blue%20color%2C%20elegant%20curved%20design%20with%20gold%20accents%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20piece%2C%20dramatic%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-1&orientation=squarish', new: true },
-{ id: 2, name: 'Canapé Moderne Milano', category: 'canapes', price: '4 250 €', priceNum: 4250, description: 'Design italien contemporain 3 places', image: 'https://readdy.ai/api/search-image?query=Contemporary%20Italian-style%20sofa%20in%20light%20gray%20premium%20fabric%2C%20modern%20clean%20lines%2C%20sophisticated%20living%20room%20furniture%2C%20luxury%20upholstery%2C%20elegant%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-2&orientation=squarish' },
-{ id: 3, name: 'Table Basse Carrare', category: 'accessoires', price: '1 650 €', priceNum: 1650, description: 'Marbre de Carrare et pieds laiton brossé', image: 'https://readdy.ai/api/search-image?query=Elegant%20round%20coffee%20table%20with%20white%20Carrara%20marble%20top%20and%20brushed%20brass%20legs%2C%20luxury%20living%20room%20furniture%2C%20sophisticated%20design%2C%20premium%20materials%2C%20professional%20photography&width=400&height=400&seq=gallery-new-3&orientation=squarish' },
-{ id: 4, name: 'Collection Hermès Coussins', category: 'accessoires', price: '520 €', priceNum: 520, description: 'Set de 4 coussins cuir Hermès authentique', image: 'https://readdy.ai/api/search-image?query=Luxury%20leather%20cushion%20collection%20in%20rich%20cognac%20and%20deep%20brown%20colors%2C%20premium%20Hermes-style%20craftsmanship%2C%20elegant%20home%20accessories%2C%20sophisticated%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-4&orientation=squarish', new: true },
-{ id: 5, name: 'Fauteuil Cuir Cognac Heritage', category: 'fauteuils', price: '3 650 €', priceNum: 3650, description: 'Cuir pleine fleur vieilli main, patine exclusive', image: 'https://readdy.ai/api/search-image?query=Premium%20cognac%20leather%20armchair%20with%20hand-aged%20patina%2C%20classic%20design%20with%20modern%20comfort%2C%20luxury%20craftsmanship%2C%20sophisticated%20furniture%20piece%2C%20warm%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-5&orientation=squarish' },
-{ id: 6, name: 'Canapé d\'Angle Prestige', category: 'canapes', price: '6 890 €', priceNum: 6890, description: 'Configuration XXL, cuir italien premium', image: 'https://readdy.ai/api/search-image?query=Large%20luxury%20corner%20sofa%20in%20premium%20Italian%20leather%2C%20spacious%20L-shaped%20design%2C%20contemporary%20elegance%2C%20high-end%20living%20room%20furniture%2C%20sophisticated%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-6&orientation=squarish' },
-{ id: 7, name: 'Fauteuil Copenhague', category: 'fauteuils', price: '2 190 €', priceNum: 2190, description: 'Design scandinave authentique, chêne blanchi', image: 'https://readdy.ai/api/search-image?query=Authentic%20Scandinavian%20armchair%20in%20whitened%20oak%20wood%20and%20cream%20linen%20fabric%2C%20minimalist%20Nordic%20design%2C%20elegant%20craftsmanship%2C%20natural%20materials%2C%20professional%20photography&width=400&height=400&seq=gallery-new-7&orientation=squarish' },
-{ id: 8, name: 'Table Basse Sculptural', category: 'accessoires', price: '1 280 €', priceNum: 1280, description: 'Chêne massif sculpté, pièce d\'art fonctionnelle', image: 'https://readdy.ai/api/search-image?query=Sculptural%20solid%20oak%20coffee%20table%20with%20artistic%20carved%20base%2C%20functional%20art%20piece%2C%20premium%20hardwood%20furniture%2C%20contemporary%20design%2C%20dramatic%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-8&orientation=squarish', new: true },
-{ id: 9, name: 'Chesterfield Royal', category: 'canapes', price: '7 850 €', priceNum: 7850, description: 'Cuir vintage anglais, capitonnage artisanal', image: 'https://readdy.ai/api/search-image?query=Classic%20Royal%20Chesterfield%20sofa%20in%20vintage%20English%20leather%2C%20traditional%20button%20tufting%2C%20luxury%20craftsmanship%2C%20sophisticated%20living%20room%20centerpiece%2C%20elegant%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-9&orientation=squarish' },
-{ id: 10, name: 'Ottoman Velours Émeraude', category: 'accessoires', price: '650 €', priceNum: 650, description: 'Velours précieux et pieds laiton massif', image: 'https://readdy.ai/api/search-image?query=Luxury%20emerald%20velvet%20ottoman%20with%20solid%20brass%20legs%2C%20elegant%20round%20design%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20accessory%2C%20rich%20colors%2C%20professional%20photography&width=400&height=400&seq=gallery-new-10&orientation=squarish' },
-{ id: 11, name: 'Bergère Marie-Antoinette', category: 'fauteuils', price: '3 850 €', priceNum: 3850, description: 'Réplique authentique, dorures à la feuille', image: 'https://readdy.ai/api/search-image?query=Authentic%20Marie-Antoinette%20style%20bergere%20armchair%20with%20gold%20leaf%20gilding%2C%20classical%20French%20luxury%20furniture%2C%20elegant%20upholstery%2C%20sophisticated%20historical%20design%2C%20professional%20photography&width=400&height=400&seq=gallery-new-11&orientation=squarish' },
-{ id: 12, name: 'Système Modulaire Infinity', category: 'canapes', price: '5 890 €', priceNum: 5890, description: 'Configuration infinie, innovation française', image: 'https://readdy.ai/api/search-image?query=Modern%20modular%20sofa%20system%20with%20infinite%20configuration%20possibilities%2C%20premium%20French%20design%2C%20contemporary%20luxury%20furniture%2C%20sophisticated%20upholstery%2C%20innovative%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-12&orientation=squarish', new: true },
-{ id: 13, name: 'Fauteuil Pivotant Executive', category: 'fauteuils', price: '2 450 €', priceNum: 2450, description: 'Cuir noir premium, mécanisme allemand', image: 'https://readdy.ai/api/search-image?query=Luxury%20executive%20swivel%20armchair%20in%20premium%20black%20leather%2C%20German%20engineering%20mechanism%2C%20sophisticated%20office%20furniture%2C%20elegant%20design%2C%20professional%20styling%2C%20studio%20photography&width=400&height=400&seq=gallery-new-13&orientation=squarish' },
-{ id: 14, name: 'Banquette Parisienne', category: 'canapes', price: '3 750 €', priceNum: 3750, description: 'Style haussmannien revisité, velours bleu nuit', image: 'https://readdy.ai/api/search-image?query=Elegant%20Parisian-style%20banquette%20in%20midnight%20blue%20velvet%2C%20Haussmann-inspired%20design%2C%20sophisticated%20French%20furniture%2C%20luxury%20upholstery%2C%20classic%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-14&orientation=squarish' },
-{ id: 15, name: 'Console Cristal & Bronze', category: 'accessoires', price: '2 890 €', priceNum: 2890, description: 'Plateau cristal Baccarat, structure bronze', image: 'https://readdy.ai/api/search-image?query=Luxury%20crystal%20console%20table%20with%20Baccarat%20crystal%20top%20and%20bronze%20structure%2C%20elegant%20living%20room%20furniture%2C%20sophisticated%20materials%2C%20premium%20craftsmanship%2C%20professional%20photography&width=400&height=400&seq=gallery-new-15&orientation=squarish', new: true },
-{ id: 16, name: 'Méridienne Art Déco', category: 'fauteuils', price: '4 250 €', priceNum: 4250, description: 'Inspiration années 30, laque noire et or', image: 'https://readdy.ai/api/search-image?query=Art%20Deco%20style%20meridienne%20chaise%20lounge%20in%20black%20lacquer%20with%20gold%20accents%2C%201930s%20inspired%20luxury%20furniture%2C%20sophisticated%20vintage%20design%2C%20elegant%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-16&orientation=squarish' }
+{ id: 1, name: 'Fauteuil Velours Bleu ', category: 'fauteuils', price: '120 000f', priceNum: 2890, description: 'Élégance intemporelle et confort premium dans un velours bleu profond. Structure en bois massif et détails dorés.', image: 'https://readdy.ai/api/search-image?query=Luxury%20velvet%20armchair%20in%20deep%20royal%20blue%20color%2C%20elegant%20curved%20design%20with%20gold%20accents%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20piece%2C%20dramatic%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-1&orientation=squarish', new: true, collection: 'moderne' },
+{ id: 2, name: 'Canapé Moderne Milano', category: 'canapes', price: '165 000f', priceNum: 4250, description: 'Design italien contemporain 3 places en tissu premium. Lignes épurées et confort exceptionnel.', image: 'https://readdy.ai/api/search-image?query=Contemporary%20Italian-style%20sofa%20in%20light%20gray%20premium%20fabric%2C%20modern%20clean%20lines%2C%20sophisticated%20living%20room%20furniture%2C%20luxury%20upholstery%2C%20elegant%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-2&orientation=squarish', collection: 'moderne' },
+{ id: 3, name: 'Table Basse Carrare', category: 'accessoires', price: '111 000f', priceNum: 1650, description: 'Marbre de Carrare authentique et pieds en laiton brossé. Pièce centrale élégante pour votre salon.', image: 'https://readdy.ai/api/search-image?query=Elegant%20round%20coffee%20table%20with%20white%20Carrara%20marble%20top%20and%20brushed%20brass%20legs%2C%20luxury%20living%20room%20furniture%2C%20sophisticated%20design%2C%20premium%20materials%2C%20professional%20photography&width=400&height=400&seq=gallery-new-3&orientation=squarish', new: true, collection: 'moderne' },
+{ id: 4, name: 'Collection Hermès ', category: 'accessoires', price: '240 000f', priceNum: 520, description: 'Set de 4 coussins en cuir Hermès authentique. Tons cognac et brun profond, artisanat d\'exception.', image: 'https://readdy.ai/api/search-image?query=Luxury%20leather%20cushion%20collection%20in%20rich%20cognac%20and%20deep%20brown%20colors%2C%20premium%20Hermes-style%20craftsmanship%2C%20elegant%20home%20accessories%2C%20sophisticated%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-4&orientation=squarish', new: true, collection: 'classique' },
+{ id: 5, name: 'Fauteuil Cuir Cognac ', category: 'fauteuils', price: '179 000f', priceNum: 3650, description: 'Cuir pleine fleur vieilli à la main, patine exclusive. Confort royal et design intemporel.', image: 'https://readdy.ai/api/search-image?query=Premium%20cognac%20leather%20armchair%20with%20hand-aged%20patina%2C%20classic%20design%20with%20modern%20comfort%2C%20luxury%20craftsmanship%2C%20sophisticated%20furniture%20piece%2C%20warm%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-5&orientation=squarish', collection: 'classique' },
+{ id: 6, name: 'Canapé d\'Angle ', category: 'canapes', price: '135 000f', priceNum: 6890, description: 'Configuration XXL en cuir italien premium. Idéal pour les grands salons et moments de détente.', image: 'https://readdy.ai/api/search-image?query=Large%20luxury%20corner%20sofa%20in%20premium%20Italian%20leather%2C%20spacious%20L-shaped%20design%2C%20contemporary%20elegance%2C%20high-end%20living%20room%20furniture%2C%20sophisticated%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-6&orientation=squarish', collection: 'moderne' },
+{ id: 7, name: 'Fauteuil Copenhague', category: 'fauteuils', price: '321 000f', priceNum: 2190, description: 'Design scandinave authentique en chêne blanchi et lin naturel. Élégance nordique et confort optimal.', image: 'https://readdy.ai/api/search-image?query=Authentic%20Scandinavian%20armchair%20in%20whitened%20oak%20wood%20and%20cream%20linen%20fabric%2C%20minimalist%20Nordic%20design%2C%20elegant%20craftsmanship%2C%20natural%20materials%2C%20professional%20photography&width=400&height=400&seq=gallery-new-7&orientation=squarish', collection: 'moderne' },
+{ id: 8, name: 'Table Sculptural', category: 'accessoires', price: '562 000f', priceNum: 1280, description: 'Chêne massif sculpté à la main. Pièce d\'art fonctionnelle qui sublime votre intérieur.', image: 'https://readdy.ai/api/search-image?query=Sculptural%20solid%20oak%20coffee%20table%20with%20artistic%20carved%20base%2C%20functional%20art%20piece%2C%20premium%20hardwood%20furniture%2C%20contemporary%20design%2C%20dramatic%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-8&orientation=squarish', new: true, collection: 'artdeco' },
+{ id: 9, name: 'Chesterfield Royal', category: 'canapes', price: '321 000f', priceNum: 7850, description: 'Cuir vintage anglais, capitonnage artisanal', image: 'https://readdy.ai/api/search-image?query=Classic%20Royal%20Chesterfield%20sofa%20in%20vintage%20English%20leather%2C%20traditional%20button%20tufting%2C%20luxury%20craftsmanship%2C%20sophisticated%20living%20room%20centerpiece%2C%20elegant%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-9&orientation=squarish' },
+{ id: 10, name: 'Ottoman Velours ', category: 'accessoires', price: '120 000f', priceNum: 650, description: 'Velours précieux et pieds laiton massif', image: 'https://readdy.ai/api/search-image?query=Luxury%20emerald%20velvet%20ottoman%20with%20solid%20brass%20legs%2C%20elegant%20round%20design%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20accessory%2C%20rich%20colors%2C%20professional%20photography&width=400&height=400&seq=gallery-new-10&orientation=squarish' },
+{ id: 11, name: 'Bergère Marie-Antoinette', category: 'fauteuils', price: '111 000f', priceNum: 3850, description: 'Réplique authentique, dorures à la feuille', image: 'https://readdy.ai/api/search-image?query=Authentic%20Marie-Antoinette%20style%20bergere%20armchair%20with%20gold%20leaf%20gilding%2C%20classical%20French%20luxury%20furniture%2C%20elegant%20upholstery%2C%20sophisticated%20historical%20design%2C%20professional%20photography&width=400&height=400&seq=gallery-new-11&orientation=squarish' },
+{ id: 12, name: 'Système Modulaire ', category: 'canapes', price: '321 000f', priceNum: 5890, description: 'Configuration infinie, innovation française', image: 'https://readdy.ai/api/search-image?query=Modern%20modular%20sofa%20system%20with%20infinite%20configuration%20possibilities%2C%20premium%20French%20design%2C%20contemporary%20luxury%20furniture%2C%20sophisticated%20upholstery%2C%20innovative%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-12&orientation=squarish', new: true },
+{ id: 13, name: 'Fauteuil Pivotant ', category: 'fauteuils', price: '120 000f', priceNum: 2450, description: 'Cuir noir premium, mécanisme allemand', image: 'https://readdy.ai/api/search-image?query=Luxury%20executive%20swivel%20armchair%20in%20premium%20black%20leather%2C%20German%20engineering%20mechanism%2C%20sophisticated%20office%20furniture%2C%20elegant%20design%2C%20professional%20styling%2C%20studio%20photography&width=400&height=400&seq=gallery-new-13&orientation=squarish' },
+{ id: 14, name: 'Banquette Parisienne', category: 'canapes', price: '321 456f', priceNum: 3750, description: 'Style haussmannien revisité, velours bleu nuit', image: 'https://readdy.ai/api/search-image?query=Elegant%20Parisian-style%20banquette%20in%20midnight%20blue%20velvet%2C%20Haussmann-inspired%20design%2C%20sophisticated%20French%20furniture%2C%20luxury%20upholstery%2C%20classic%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-14&orientation=squarish' },
+{ id: 15, name: 'Console Cristal ', category: 'accessoires', price: '111 000f', priceNum: 2890, description: 'Plateau cristal Baccarat, structure bronze', image: 'https://readdy.ai/api/search-image?query=Luxury%20crystal%20console%20table%20with%20Baccarat%20crystal%20top%20and%20bronze%20structure%2C%20elegant%20living%20room%20furniture%2C%20sophisticated%20materials%2C%20premium%20craftsmanship%2C%20professional%20photography&width=400&height=400&seq=gallery-new-15&orientation=squarish', new: true },
+{ id: 16, name: 'Méridienne Art ', category: 'fauteuils', price: '321 000f', priceNum: 4250, description: 'Inspiration années 30, laque noire et or', image: 'https://readdy.ai/api/search-image?query=Art%20Deco%20style%20meridienne%20chaise%20lounge%20in%20black%20lacquer%20with%20gold%20accents%2C%201930s%20inspired%20luxury%20furniture%2C%20sophisticated%20vintage%20design%2C%20elegant%20styling%2C%20professional%20photography&width=400&height=400&seq=gallery-new-16&orientation=squarish' }
 ];
 
 let currentFilter = 'tous';
@@ -813,9 +804,12 @@ modalContent.innerHTML = `
         </p>
 
         <!-- Avis -->
-        <div class="flex items-center gap-2 text-sm text-gray-500">
-            <i class="ri-star-fill text-primary"></i>
-            <span>4.8/5 (${Math.floor(Math.random() * 50) + 20} avis)</span>
+         <div class="flex items-center gap-4">
+            <div class="text-4xl font-black text-primary">${product.price}</div>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+                <i class="ri-star-fill text-primary"></i>
+                <span>4.8/5 (${Math.floor(Math.random() * 50) + 20} avis)</span>
+            </div>
         </div>
 
         <!-- Caractéristiques -->
@@ -829,7 +823,7 @@ modalContent.innerHTML = `
                 <li class="flex items-center gap-2">
                     <i class="ri-check-line text-primary"></i> Garantie 10 ans
                 </li>
-                <li class="flex items-center gap-2">
+                <li class="flex itemsCenter gap-2">
                     <i class="ri-check-line text-primary"></i> Assemblage inclus
                 </li>
             </ul>
@@ -840,7 +834,7 @@ modalContent.innerHTML = `
                        hover:from-secondary hover:to-primary text-white px-6 py-3 
                        !rounded-button text-base font-bold transition-all 
                        duration-300 transform hover:scale-105">
-            Ajouter au Panier
+            Contacter
         </button>
     </div>
 
@@ -865,7 +859,8 @@ modalContent.innerHTML = `
             ${product.description}
         </p>
 
-        <div class="flex items-center gap-4">
+       <div class="flex items-center gap-4">
+            <div class="text-4xl font-black text-primary">${product.price}</div>
             <div class="flex items-center gap-2 text-sm text-gray-500">
                 <i class="ri-star-fill text-primary"></i>
                 <span>4.8/5 (${Math.floor(Math.random() * 50) + 20} avis)</span>
@@ -892,7 +887,7 @@ modalContent.innerHTML = `
                        hover:from-secondary hover:to-primary text-white px-8 py-4 
                        !rounded-button text-lg font-bold transition-all 
                        duration-300 transform hover:scale-105">
-            Commander
+           Contacter
         </button>
     </div>
 
@@ -953,7 +948,10 @@ Vue Rapide
 <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300 line-clamp-2">${product.name}</h3>
 <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">${product.description}</p>
 <div class="flex justify-between items-center">
-
+<p class="text-xl font-black text-primary">${product.price}</p>
+<button onclick="showQuickView(${product.id})" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-4 py-2 !rounded-button font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap text-sm">
+Découvrir
+</button>
 </div>
 </div>
 </div>
@@ -1022,10 +1020,5 @@ this.classList.add('hidden');
 });
 });
         </script>
-        <!-- <div class="text-4xl font-black text-primary">${product.price}</div> -->
-         <!-- <p class="text-xl font-black text-primary">${product.price}</p>
-<button onclick="showQuickView(${product.id})" class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-4 py-2 !rounded-button font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap text-sm">
-Découvrir
-</button> -->
     </body>
 </html>
