@@ -90,42 +90,106 @@ right: 0;
 background: white;
 border-top: 1px solid #e5e7eb;
 z-index: 40;
-padding: 8px 16px;
+padding: 12px 16px 16px;
 display: none;
+box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+backdrop-filter: blur(10px);
 }
 .dark .mobile-bottom-tabs {
-background: #1f2937;
+background: rgba(31, 41, 55, 0.95);
 border-top-color: #374151;
+box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
 }
 .mobile-tab {
 flex: 1;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 8px 4px;
-border-radius: 12px;
-transition: all 0.3s ease;
+padding: 12px 8px;
+border-radius: 16px;
+transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 font-size: 12px;
-font-weight: 500;
+font-weight: 600;
+position: relative;
+overflow: hidden;
+color: #6b7280;
+background: transparent;
+}
+.dark .mobile-tab {
+color: #9ca3af;
 }
 .mobile-tab.active {
-background: rgba(184, 134, 11, 0.1);
 color: #B8860B;
+background: linear-gradient(135deg, rgba(184, 134, 11, 0.12) 0%, rgba(205, 133, 63, 0.08) 100%);
+transform: translateY(-4px);
+box-shadow: 0 8px 25px -8px rgba(184, 134, 11, 0.4);
+}
+.dark .mobile-tab.active {
+background: linear-gradient(135deg, rgba(184, 134, 11, 0.2) 0%, rgba(205, 133, 63, 0.15) 100%);
+box-shadow: 0 8px 25px -8px rgba(184, 134, 11, 0.6);
+}
+.mobile-tab.active::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, #B8860B, #CD853F);
+border-radius: 0 0 8px 8px;
+}
+.mobile-tab.active::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 8px;
+height: 8px;
+background: #B8860B;
+border-radius: 50%;
+opacity: 0.3;
+filter: blur(6px);
 }
 .mobile-tab-icon {
-width: 20px;
-height: 20px;
-margin-bottom: 4px;
+width: 24px;
+height: 24px;
+margin-bottom: 6px;
 display: flex;
 align-items: center;
 justify-content: center;
+border-radius: 8px;
+transition: all 0.3s ease;
+position: relative;
+z-index: 2;
+}
+.mobile-tab.active .mobile-tab-icon {
+transform: scale(1.1);
+color: #B8860B;
+}
+.mobile-tab .mobile-tab-icon i {
+transition: all 0.3s ease;
+}
+.mobile-tab.active .mobile-tab-icon i {
+filter: drop-shadow(0 2px 4px rgba(184, 134, 11, 0.3));
+}
+.mobile-tab span {
+position: relative;
+z-index: 2;
+transition: all 0.3s ease;
+font-weight: 600;
+letter-spacing: -0.01em;
+}
+.mobile-tab.active span {
+font-weight: 700;
+text-shadow: 0 1px 2px rgba(184, 134, 11, 0.2);
 }
 
 /* Video Hero Section */
 .video-hero-container {
 position: relative;
-height: 70vh;
-min-height: 500px;
+height: 80vh;
+min-height: 600px;
 overflow: hidden;
 }
 .video-hero {
@@ -136,7 +200,41 @@ object-fit: cover;
 .video-overlay {
 position: absolute;
 inset: 0;
-background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(184,134,11,0.3) 50%, rgba(0,0,0,0.7) 100%);
+background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(184,134,11,0.4) 50%, rgba(0,0,0,0.8) 100%);
+}
+.video-content {
+position: absolute;
+inset: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+}
+.video-play-button {
+width: 80px;
+height: 80px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s ease;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(184, 134, 11, 0.3);
+}
+.video-play-button:hover {
+background: rgba(184, 134, 11, 0.9);
+transform: scale(1.1);
+box-shadow: 0 0 40px rgba(184, 134, 11, 0.5);
+}
+.video-play-button i {
+font-size: 2rem;
+color: #B8860B;
+transition: all 0.3s ease;
+}
+.video-play-button:hover i {
+color: white;
 }
 
 @media (max-width: 1024px) {
@@ -144,7 +242,37 @@ background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(184,134,11,0.3) 50%,
 display: flex;
 }
 .products-section {
-padding-bottom: 80px;
+padding-bottom: 100px;
+}
+.video-hero-container {
+height: 60vh;
+min-height: 500px;
+}
+}
+
+@media (max-width: 640px) {
+.mobile-bottom-tabs {
+padding: 10px 12px 14px;
+}
+.mobile-tab {
+padding: 10px 6px;
+font-size: 11px;
+}
+.mobile-tab-icon {
+width: 20px;
+height: 20px;
+margin-bottom: 4px;
+}
+.video-hero-container {
+height: 50vh;
+min-height: 400px;
+}
+.video-play-button {
+width: 60px;
+height: 60px;
+}
+.video-play-button i {
+font-size: 1.5rem;
 }
 }
         </style>
@@ -192,27 +320,27 @@ padding-bottom: 80px;
 
         <!-- Mobile Bottom Tabs -->
         <div class="mobile-bottom-tabs">
-            <button onclick="filterProducts('tous')" class="mobile-tab active">
+            <button onclick="filterProducts('tous')" class="mobile-tab active" data-category="tous">
                 <div class="mobile-tab-icon">
-                    <i class="ri-apps-2-line"></i>
+                    <i class="ri-apps-2-line text-lg"></i>
                 </div>
                 <span>Tout</span>
             </button>
-            <button onclick="filterProducts('fauteuils')" class="mobile-tab">
+            <button onclick="filterProducts('fauteuils')" class="mobile-tab" data-category="fauteuils">
                 <div class="mobile-tab-icon">
-                    <i class="ri-armchair-line"></i>
+                    <i class="ri-armchair-line text-lg"></i>
                 </div>
                 <span>Fauteuils</span>
             </button>
-            <button onclick="filterProducts('canapes')" class="mobile-tab">
+            <button onclick="filterProducts('canapes')" class="mobile-tab" data-category="canapes">
                 <div class="mobile-tab-icon">
-                    <i class="ri-sofa-line"></i>
+                    <i class="ri-sofa-line text-lg"></i>
                 </div>
                 <span>Canapés</span>
             </button>
-            <button onclick="filterProducts('accessoires')" class="mobile-tab">
+            <button onclick="filterProducts('accessoires')" class="mobile-tab" data-category="accessoires">
                 <div class="mobile-tab-icon">
-                    <i class="ri-home-8-line"></i>
+                    <i class="ri-home-8-line text-lg"></i>
                 </div>
                 <span>Accessoires</span>
             </button>
@@ -222,37 +350,42 @@ padding-bottom: 80px;
         <div>
             <!-- Video Hero Section -->
             <section class="video-hero-container">
-                <video autoplay muted loop playsinline class="video-hero">
+                <video autoplay muted loop playsinline class="video-hero" id="showroom-video">
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.mp4" type="video/mp4">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.webm" type="video/webm">
                     Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
                 <div class="video-overlay"></div>
-                <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="video-content">
                     <div class="text-center text-white px-4 max-w-4xl">
-                        <div class="inline-block mb-6">
-                            <span class="inline-block bg-primary/30 text-white px-6 py-3 rounded-full text-sm font-semibold mb-4 glass-effect border border-white/20">
+                        <div class="inline-block mb-8">
+                            <span class="inline-block bg-primary/30 text-white px-8 py-4 rounded-full text-lg font-semibold mb-6 glass-effect border border-white/20">
                                 ✨ Collection Exclusive 2024
                             </span>
                         </div>
-                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-none text-shadow">
+                        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none text-shadow">
                             GALERIE
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary block mt-2 md:mt-4">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary block mt-4 md:mt-6">
                                 PRESTIGE
                             </span>
                         </h1>
-                        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light mb-8">
-                            164 créations d'exception pour transformer votre salon en œuvre d'art
+                        <p class="text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light mb-12">
+                            Découvrez l'excellence dans notre showroom d'exception
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button onclick="filterProducts('tous')" class="bg-gradient-to-r from-primary to-yellow-500 text-white px-8 py-4 md:px-12 md:py-6 !rounded-button text-lg md:text-xl font-bold transition-all duration-500 transform hover:scale-105 glow-effect whitespace-nowrap">
-                                Voir Tout
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                            <button onclick="filterProducts('tous')" class="bg-gradient-to-r from-primary to-yellow-500 text-white px-16 py-6 !rounded-button text-xl font-bold transition-all duration-500 transform hover:scale-105 glow-effect whitespace-nowrap shadow-2xl">
+                                Explorer la Collection
                             </button>
-                            <button onclick="filterProducts('nouveautes')" class="glass-effect text-white px-8 py-4 md:px-12 md:py-6 !rounded-button text-lg md:text-xl font-semibold transition-all duration-500 hover:bg-white/20 whitespace-nowrap border border-white/30">
-                                Nouveautés
+                            <button class="video-play-button" onclick="toggleVideo()">
+                                <i class="ri-play-fill"></i>
                             </button>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Floating elements for visual interest -->
+                <div class="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full floating-card blur-xl"></div>
+                <div class="absolute bottom-20 right-10 w-48 h-48 bg-secondary/20 rounded-full floating-card blur-xl" style="animation-delay: -3s;"></div>
             </section>
 
             <!-- Advanced Filters Section -->
@@ -520,6 +653,22 @@ padding-bottom: 80px;
         </footer>
 
         <script>
+// Video control function
+function toggleVideo() {
+const video = document.getElementById('showroom-video');
+const playButton = document.querySelector('.video-play-button i');
+    
+if (video.paused) {
+video.play();
+playButton.classList.remove('ri-play-fill');
+playButton.classList.add('ri-pause-fill');
+} else {
+video.pause();
+playButton.classList.remove('ri-pause-fill');
+playButton.classList.add('ri-play-fill');
+}
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
@@ -575,19 +724,9 @@ const tabs = document.querySelectorAll('.mobile-tab');
 tabs.forEach(tab => {
 tab.classList.remove('active');
 });
-const activeTab = document.querySelector(`.mobile-tab:nth-child(${getTabIndex(currentFilter)})`);
+const activeTab = document.querySelector(`.mobile-tab[data-category="${currentFilter}"]`);
 if (activeTab) {
 activeTab.classList.add('active');
-}
-}
-
-function getTabIndex(category) {
-switch(category) {
-case 'tous': return 1;
-case 'fauteuils': return 2;
-case 'canapes': return 3;
-case 'accessoires': return 4;
-default: return 1;
 }
 }
 
