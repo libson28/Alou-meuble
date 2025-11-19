@@ -317,7 +317,6 @@ font-size: 1.5rem;
                 </div>
             </div>
         </nav>
-
         <!-- Mobile Bottom Tabs -->
         <div class="mobile-bottom-tabs">
             <button onclick="filterProducts('tous')" class="mobile-tab active" data-category="tous">
@@ -345,11 +344,10 @@ font-size: 1.5rem;
                 <span>Accessoires</span>
             </button>
         </div>
-
         <!-- Gallery Page Content -->
         <div>
             <!-- Video Hero Section -->
-            <section class="video-hero-container">
+            <!-- <section class="video-hero-container">
                 <video autoplay muted loop playsinline class="video-hero" id="showroom-video">
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.mp4" type="video/mp4">
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-showroom-of-a-modern-furniture-store-44735-large.webm" type="video/webm">
@@ -383,12 +381,28 @@ font-size: 1.5rem;
                     </div>
                 </div>
                 
-                <!-- Floating elements for visual interest -->
+                
                 <div class="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full floating-card blur-xl"></div>
                 <div class="absolute bottom-20 right-10 w-48 h-48 bg-secondary/20 rounded-full floating-card blur-xl" style="animation-delay: -3s;"></div>
+            </section> -->
+            <!-- Advanced Filters Section -->
+            <section class="relative h-94 overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=Ultra%20luxurious%20furniture%20showroom%20interior%20with%20dramatic%20architectural%20lighting%2C%20premium%20displays%2C%20marble%20floors%2C%20sophisticated%20retail%20environment%2C%20contemporary%20design%2C%20artistic%20composition&width=1920&height=600&seq=gallery-hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                    <div class="text-center w-full pt-12 pb-12">
+                        
+                        <h1 class="text-6xl md:text-8xl font-black text-white mb-6 leading-none text-shadow">
+                            GALERIE
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">PRESTIGE</span>
+                        </h1>
+                        
+                    </div>
+                </div>
+                <!-- Floating geometric elements -->
+                <div class="absolute top-20 left-20 w-32 h-32 border-2 border-primary/30 rounded-full floating-card"></div>
+                <div class="absolute bottom-20 right-20 w-24 h-24 bg-primary/20 rounded-full floating-card blur-sm" style="animation-delay: -2s;"></div>
             </section>
 
-            <!-- Advanced Filters Section -->
             <section class="py-16 bg-white dark:bg-gray-800 products-section">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="mb-12">
@@ -428,7 +442,6 @@ font-size: 1.5rem;
                                     </div>
                                 </button>
                             </div>
-
                             <!-- View Toggle & Sort -->
                             <div class="flex items-center gap-4 justify-center lg:justify-end">
                                 <div class="flex bg-white dark:bg-gray-700 rounded-xl p-1 shadow-lg">
@@ -452,17 +465,13 @@ font-size: 1.5rem;
                             </div>
                         </div>
                     </div>
-
                     <!-- Products Grid -->
                     <div id="products-container" class="relative">
                         <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 transition-all duration-500">
-                            <!-- Products will be populated by JavaScript -->
-                        </div>
+                            <!-- Products will be populated by JavaScript --></div>
                         <div id="products-list" class="hidden space-y-6">
-                            <!-- List view will be populated by JavaScript -->
-                        </div>
+                            <!-- List view will be populated by JavaScript --></div>
                     </div>
-
                     <!-- Load More Button -->
                     <div class="text-center mt-16">
                         <button id="load-more" class="bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 !rounded-button text-lg font-semibold transition-all duration-500 hover:scale-105 glow-effect whitespace-nowrap">
@@ -476,26 +485,23 @@ font-size: 1.5rem;
                     </div>
                 </div>
             </section>
-
             <!-- Featured Collections -->
             <section class="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
                         <h2 class="text-5xl font-black mb-6 text-gray-900 dark:text-white">
-                            Collections <span class="text-primary">Exclusives</span>
+                            Collections
+                            <span class="text-primary">Exclusives</span>
                         </h2>
                         <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                             Découvrez nos univers thématiques soigneusement curatés
                         </p>
                     </div>
-                    
                     <div class="grid lg:grid-cols-3 gap-8">
                         <!-- Collection 1 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Luxury%20modern%20minimalist%20living%20room%20with%20neutral%20tones%2C%20clean%20lines%2C%20premium%20materials%2C%20Scandinavian%20inspiration%2C%20sophisticated%20interior%20design&width=500&height=400&seq=collection-modern&orientation=landscape" 
-                                     alt="Collection Moderne" 
-                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Luxury%20modern%20minimalist%20living%20room%20with%20neutral%20tones%2C%20clean%20lines%2C%20premium%20materials%2C%20Scandinavian%20inspiration%2C%20sophisticated%20interior%20design&width=500&height=400&seq=collection-modern&orientation=landscape" alt="Collection Moderne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -509,13 +515,10 @@ font-size: 1.5rem;
                                 </div>
                             </div>
                         </div>
-
                         <!-- Collection 2 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Classic%20French%20luxury%20living%20room%20with%20traditional%20furniture%2C%20rich%20woods%2C%20elegant%20fabrics%2C%20heritage%20design%2C%20sophisticated%20classical%20interior&width=500&height=400&seq=collection-classic&orientation=landscape" 
-                                     alt="Collection Classique" 
-                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Classic%20French%20luxury%20living%20room%20with%20traditional%20furniture%2C%20rich%20woods%2C%20elegant%20fabrics%2C%20heritage%20design%2C%20sophisticated%20classical%20interior&width=500&height=400&seq=collection-classic&orientation=landscape" alt="Collection Classique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -529,13 +532,10 @@ font-size: 1.5rem;
                                 </div>
                             </div>
                         </div>
-
                         <!-- Collection 3 -->
                         <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover-scale">
                             <div class="h-80 overflow-hidden">
-                                <img src="https://readdy.ai/api/search-image?query=Art%20Deco%20inspired%20luxury%20interior%20with%20geometric%20patterns%2C%20rich%20materials%2C%20gold%20accents%2C%20vintage%20elegance%2C%20sophisticated%20retro%20design&width=500&height=400&seq=collection-artdeco&orientation=landscape" 
-                                     alt="Collection Art Déco" 
-                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://readdy.ai/api/search-image?query=Art%20Deco%20inspired%20luxury%20interior%20with%20geometric%20patterns%2C%20rich%20materials%2C%20gold%20accents%2C%20vintage%20elegance%2C%20sophisticated%20retro%20design&width=500&height=400&seq=collection-artdeco&orientation=landscape" alt="Collection Art Déco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             </div>
                             <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -552,7 +552,6 @@ font-size: 1.5rem;
                     </div>
                 </div>
             </section>
-
             <!-- Quick View Modal -->
             <div id="quick-view-modal" class="fixed inset-0 z-50 hidden">
                 <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
@@ -562,13 +561,11 @@ font-size: 1.5rem;
                             <i class="ri-close-line text-xl"></i>
                         </button>
                         <div id="modal-content" class="p-8">
-                            <!-- Modal content will be populated by JavaScript -->
-                        </div>
+                            <!-- Modal content will be populated by JavaScript --></div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <footer class="bg-gray-900 dark:bg-black text-white py-16 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -651,7 +648,6 @@ font-size: 1.5rem;
                 </div>
             </div>
         </footer>
-
         <script>
 // Video control function
 function toggleVideo() {
@@ -683,7 +679,6 @@ localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 });
         </script>
-
         <script>
 document.addEventListener('DOMContentLoaded', function() {
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -693,7 +688,6 @@ mobileMenu.classList.toggle('hidden');
 });
 });
         </script>
-
         <script>
 const products = [
 { id: 1, name: 'Fauteuil Velours Bleu Impérial', category: 'fauteuils', price: '2 890 €', priceNum: 2890, description: 'Élégance intemporelle et confort premium dans un velours bleu profond. Structure en bois massif et détails dorés.', image: 'https://readdy.ai/api/search-image?query=Luxury%20velvet%20armchair%20in%20deep%20royal%20blue%20color%2C%20elegant%20curved%20design%20with%20gold%20accents%2C%20premium%20upholstery%2C%20sophisticated%20furniture%20piece%2C%20dramatic%20lighting%2C%20professional%20photography&width=400&height=400&seq=gallery-new-1&orientation=squarish', new: true, collection: 'moderne' },
